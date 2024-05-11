@@ -16,6 +16,17 @@ import { LoginComponent } from './components/auth/login/login.component';
 import { ForgotPasswordComponent } from './components/auth/forgot-password/forgot-password.component';
 import { ConfirmCodeComponent } from './components/auth/confirm-code/confirm-code.component';
 import { NewPasswordComponent } from './components/auth/new-password/new-password.component';
+import { HomeComponent } from './components/user/home/home.component';
+import { HomeworkComponent } from './components/user/homework/homework.component';
+import { ResultComponent } from './components/user/result/result.component';
+import { ResultInnerComponent } from './components/user/result-inner/result-inner.component';
+import { QuestionListComponent } from './components/user/question-list/question-list.component';
+import { AskQuestionComponent } from './components/user/ask-question/ask-question.component';
+import { AnswerComponent } from './components/user/answer/answer.component';
+import { StartQuizComponent } from './components/user/start-quiz/start-quiz.component';
+import { QuizOptionComponent } from './components/user/quiz-option/quiz-option.component';
+import { QuizScoreComponent } from './components/user/quiz-score/quiz-score.component';
+import { ProfileComponent } from './components/user/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +44,16 @@ import { NewPasswordComponent } from './components/auth/new-password/new-passwor
     ForgotPasswordComponent,
     ConfirmCodeComponent,
     NewPasswordComponent
+    HomeworkComponent,
+    ResultComponent,
+    ResultInnerComponent,
+    QuestionListComponent,
+    AskQuestionComponent,
+    AnswerComponent,
+    StartQuizComponent,
+    QuizOptionComponent,
+    QuizScoreComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
