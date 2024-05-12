@@ -27,6 +27,7 @@ import { ProfileComponent } from './components/user/profile/profile.component';
 import { NavbarComponent } from './components/UI/navbar/navbar.component';
 import { HomeworkPopUpComponent } from './components/UI/homework-pop-up/homework-pop-up.component';
 import { LoginNavbarComponent } from './components/UI/login-navbar/login-navbar.component';
+import { LoginMenuComponent } from './components/auth/login-menu/login-menu.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { LoginNavbarComponent } from './components/UI/login-navbar/login-navbar.
     ProfileComponent,
     NavbarComponent,
     HomeworkPopUpComponent,
-    LoginNavbarComponent
+    LoginNavbarComponent,
+    LoginMenuComponent
   ],
   imports: [
     BrowserModule,
