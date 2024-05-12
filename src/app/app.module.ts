@@ -16,9 +16,6 @@ import { LoginComponent } from './components/auth/login/login.component';
 import { ForgotPasswordComponent } from './components/auth/forgot-password/forgot-password.component';
 import { ConfirmCodeComponent } from './components/auth/confirm-code/confirm-code.component';
 import { NewPasswordComponent } from './components/auth/new-password/new-password.component';
-import { HomeComponent } from './components/user/home/home.component';
-import { HomeworkComponent } from './components/user/homework/homework.component';
-import { ResultComponent } from './components/user/result/result.component';
 import { ResultInnerComponent } from './components/user/result-inner/result-inner.component';
 import { QuestionListComponent } from './components/user/question-list/question-list.component';
 import { AskQuestionComponent } from './components/user/ask-question/ask-question.component';
@@ -27,9 +24,9 @@ import { StartQuizComponent } from './components/user/start-quiz/start-quiz.comp
 import { QuizOptionComponent } from './components/user/quiz-option/quiz-option.component';
 import { QuizScoreComponent } from './components/user/quiz-score/quiz-score.component';
 import { ProfileComponent } from './components/user/profile/profile.component';
-import { UIComponent } from './components/UI/ui/ui.component';
 import { NavbarComponent } from './components/UI/navbar/navbar.component';
 import { HomeworkPopUpComponent } from './components/UI/homework-pop-up/homework-pop-up.component';
+import { LoginNavbarComponent } from './components/UI/login-navbar/login-navbar.component';
 
 @NgModule({
   declarations: [
@@ -46,9 +43,7 @@ import { HomeworkPopUpComponent } from './components/UI/homework-pop-up/homework
     LoginComponent,
     ForgotPasswordComponent,
     ConfirmCodeComponent,
-    NewPasswordComponent
-    HomeworkComponent,
-    ResultComponent,
+    NewPasswordComponent,
     ResultInnerComponent,
     QuestionListComponent,
     AskQuestionComponent,
@@ -57,9 +52,9 @@ import { HomeworkPopUpComponent } from './components/UI/homework-pop-up/homework
     QuizOptionComponent,
     QuizScoreComponent,
     ProfileComponent,
-    UIComponent,
     NavbarComponent,
-    HomeworkPopUpComponent
+    HomeworkPopUpComponent,
+    LoginNavbarComponent
   ],
   imports: [
     BrowserModule,
