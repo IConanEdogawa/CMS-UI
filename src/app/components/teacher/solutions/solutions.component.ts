@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './solutions.component.scss'
 })
 export class SolutionsComponent {
-
+  upload(){
+    document.getElementById("real-input")?.click()
+  }
 }

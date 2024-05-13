@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './events.component.scss'
 })
 export class EventsComponent {
-
+  upload(){
+    document.getElementById("real-input")?.click()
+  }
 }
