@@ -31,6 +31,7 @@ import { LoginMenuComponent } from './components/auth/login-menu/login-menu.comp
 import { SecondaryNavbarComponent } from './components/UI/secondary-navbar/secondary-navbar.component';
 import { TeacherLoginComponent } from './components/teacher/teacher-login/teacher-login.component';
 import { SmallCardComponent } from './components/UI/small-card/small-card.component';
+import { FormComponent } from './components/auth/form/form.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { SmallCardComponent } from './components/UI/small-card/small-card.compon
     LoginMenuComponent,
     SecondaryNavbarComponent,
     TeacherLoginComponent,
-    SmallCardComponent
+    SmallCardComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
