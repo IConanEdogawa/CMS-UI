@@ -13,9 +13,6 @@ import { LoginComponent } from './components/auth/login/login.component';
 import { ForgotPasswordComponent } from './components/auth/forgot-password/forgot-password.component';
 import { ConfirmCodeComponent } from './components/auth/confirm-code/confirm-code.component';
 import { NewPasswordComponent } from './components/auth/new-password/new-password.component';
-import { HomeComponent } from './components/user/home/home.component';
-import { HomeworkComponent } from './components/user/homework/homework.component';
-import { ResultComponent } from './components/user/result/result.component';
 import { ResultInnerComponent } from './components/user/result-inner/result-inner.component';
 import { QuestionListComponent } from './components/user/question-list/question-list.component';
 import { AskQuestionComponent } from './components/user/ask-question/ask-question.component';
@@ -26,6 +23,11 @@ import { QuizScoreComponent } from './components/user/quiz-score/quiz-score.comp
 import { ProfileComponent } from './components/user/profile/profile.component';
 import { NavbarComponent } from './components/UI/navbar/navbar.component';
 import { HomeworkPopUpComponent } from './components/UI/homework-pop-up/homework-pop-up.component';
+import { LoginNavbarComponent } from './components/UI/login-navbar/login-navbar.component';
+import { LoginMenuComponent } from './components/auth/login-menu/login-menu.component';
+import { SecondaryNavbarComponent } from './components/UI/secondary-navbar/secondary-navbar.component';
+import { TeacherLoginComponent } from './components/teacher/teacher-login/teacher-login.component';
+import { SmallCardComponent } from './components/UI/small-card/small-card.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,12 @@ import { HomeworkPopUpComponent } from './components/UI/homework-pop-up/homework
     QuizScoreComponent,
     ProfileComponent,
     NavbarComponent,
-    HomeworkPopUpComponent
+    HomeworkPopUpComponent,
+    LoginNavbarComponent,
+    LoginMenuComponent,
+    SecondaryNavbarComponent,
+    TeacherLoginComponent,
+    SmallCardComponent
   ],
   imports: [
     BrowserModule,
