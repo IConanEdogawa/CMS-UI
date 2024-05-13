@@ -3,11 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/teacher/home/home.component';
 import { StudentRegistrationComponent } from './components/teacher/student-registration/student-registration.component';
-import { HomeworkComponent } from './components/teacher/homework/homework.component';
 import { AttendanceComponent } from './components/teacher/attendance/attendance.component';
-import { ResultComponent } from './components/teacher/result/result.component';
 import { AddMarkComponent } from './components/teacher/add-mark/add-mark.component';
 import { EventsComponent } from './components/teacher/events/events.component';
 import { SolutionsComponent } from './components/teacher/solutions/solutions.component';
@@ -27,7 +24,6 @@ import { StartQuizComponent } from './components/user/start-quiz/start-quiz.comp
 import { QuizOptionComponent } from './components/user/quiz-option/quiz-option.component';
 import { QuizScoreComponent } from './components/user/quiz-score/quiz-score.component';
 import { ProfileComponent } from './components/user/profile/profile.component';
-import { UIComponent } from './components/UI/ui/ui.component';
 import { NavbarComponent } from './components/UI/navbar/navbar.component';
 import { HomeworkPopUpComponent } from './components/UI/homework-pop-up/homework-pop-up.component';
 
@@ -46,7 +42,7 @@ import { HomeworkPopUpComponent } from './components/UI/homework-pop-up/homework
     LoginComponent,
     ForgotPasswordComponent,
     ConfirmCodeComponent,
-    NewPasswordComponent
+    NewPasswordComponent,
     HomeworkComponent,
     ResultComponent,
     ResultInnerComponent,
@@ -57,7 +53,6 @@ import { HomeworkPopUpComponent } from './components/UI/homework-pop-up/homework
     QuizOptionComponent,
     QuizScoreComponent,
     ProfileComponent,
-    UIComponent,
     NavbarComponent,
     HomeworkPopUpComponent
   ],
