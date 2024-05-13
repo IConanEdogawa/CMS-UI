@@ -6,9 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/teacher/home/home.component';
 import { HomeComponent as UserHome } from './components/user/home/home.component';
 import { StudentRegistrationComponent } from './components/teacher/student-registration/student-registration.component';
-import { HomeworkComponent } from './components/teacher/homework/homework.component';
 import { AttendanceComponent } from './components/teacher/attendance/attendance.component';
-import { ResultComponent } from './components/teacher/result/result.component';
 import { AddMarkComponent } from './components/teacher/add-mark/add-mark.component';
 import { EventsComponent } from './components/teacher/events/events.component';
 import { SolutionsComponent } from './components/teacher/solutions/solutions.component';
@@ -29,15 +27,18 @@ import { NavbarComponent } from './components/UI/navbar/navbar.component';
 import { HomeworkPopUpComponent } from './components/UI/homework-pop-up/homework-pop-up.component';
 import { LoginNavbarComponent } from './components/UI/login-navbar/login-navbar.component';
 import { LoginMenuComponent } from './components/auth/login-menu/login-menu.component';
+import { SecondaryNavbarComponent } from './components/UI/secondary-navbar/secondary-navbar.component';
+import { TeacherLoginComponent } from './components/teacher/teacher-login/teacher-login.component';
+import { SmallCardComponent } from './components/UI/small-card/small-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     StudentRegistrationComponent,
-    HomeworkComponent,
+    // HomeworkComponent,
     AttendanceComponent,
-    ResultComponent,
+    // ResultComponent,
     AddMarkComponent,
     EventsComponent,
     SolutionsComponent,
@@ -46,6 +47,8 @@ import { LoginMenuComponent } from './components/auth/login-menu/login-menu.comp
     ForgotPasswordComponent,
     ConfirmCodeComponent,
     NewPasswordComponent,
+    // HomeworkComponent,
+    // ResultComponent,
     ResultInnerComponent,
     QuestionListComponent,
     AskQuestionComponent,
@@ -58,7 +61,10 @@ import { LoginMenuComponent } from './components/auth/login-menu/login-menu.comp
     HomeworkPopUpComponent,
     LoginNavbarComponent,
     LoginMenuComponent,
-    UserHome
+    UserHome,
+    SecondaryNavbarComponent,
+    TeacherLoginComponent,
+    SmallCardComponent
   ],
   imports: [
     BrowserModule,
