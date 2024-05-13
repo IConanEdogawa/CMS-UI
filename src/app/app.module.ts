@@ -28,6 +28,9 @@ import { NavbarComponent } from './components/UI/navbar/navbar.component';
 import { HomeworkPopUpComponent } from './components/UI/homework-pop-up/homework-pop-up.component';
 import { LoginNavbarComponent } from './components/UI/login-navbar/login-navbar.component';
 import { LoginMenuComponent } from './components/auth/login-menu/login-menu.component';
+import { SecondaryNavbarComponent } from './components/UI/secondary-navbar/secondary-navbar.component';
+import { TeacherLoginComponent } from './components/teacher/teacher-login/teacher-login.component';
+import { SmallCardComponent } from './components/UI/small-card/small-card.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +59,10 @@ import { LoginMenuComponent } from './components/auth/login-menu/login-menu.comp
     NavbarComponent,
     HomeworkPopUpComponent,
     LoginNavbarComponent,
-    LoginMenuComponent
+    LoginMenuComponent,
+    SecondaryNavbarComponent,
+    TeacherLoginComponent,
+    SmallCardComponent
   ],
   imports: [
     BrowserModule,
