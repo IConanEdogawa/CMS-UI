@@ -3,11 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/teacher/home/home.component';
 import { StudentRegistrationComponent } from './components/teacher/student-registration/student-registration.component';
-import { HomeworkComponent } from './components/teacher/homework/homework.component';
 import { AttendanceComponent } from './components/teacher/attendance/attendance.component';
-import { ResultComponent } from './components/teacher/result/result.component';
 import { AddMarkComponent } from './components/teacher/add-mark/add-mark.component';
 import { EventsComponent } from './components/teacher/events/events.component';
 import { SolutionsComponent } from './components/teacher/solutions/solutions.component';
@@ -48,6 +45,8 @@ import { SmallCardComponent } from './components/UI/small-card/small-card.compon
     ForgotPasswordComponent,
     ConfirmCodeComponent,
     NewPasswordComponent,
+    HomeworkComponent,
+    ResultComponent,
     ResultInnerComponent,
     QuestionListComponent,
     AskQuestionComponent,
