@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/teacher/home/home.component';
+import { HomeComponent as UserHome } from './components/user/home/home.component';
 import { StudentRegistrationComponent } from './components/teacher/student-registration/student-registration.component';
 import { HomeworkComponent } from './components/teacher/homework/homework.component';
 import { AttendanceComponent } from './components/teacher/attendance/attendance.component';
@@ -56,7 +57,8 @@ import { LoginMenuComponent } from './components/auth/login-menu/login-menu.comp
     NavbarComponent,
     HomeworkPopUpComponent,
     LoginNavbarComponent,
-    LoginMenuComponent
+    LoginMenuComponent,
+    UserHome
   ],
   imports: [
     BrowserModule,
