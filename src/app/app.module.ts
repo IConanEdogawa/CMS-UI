@@ -32,6 +32,8 @@ import { TeacherLoginComponent } from './components/teacher/teacher-login/teache
 import { SmallCardComponent } from './components/UI/small-card/small-card.component';
 import { FormComponent } from './components/auth/form/form.component';
 import { HomeworkComponent as UserHomework } from './components/user/homework/homework.component';
+import { StudentLoginComponent } from './components/user/student-login/student-login.component';
+import { StudentProfileComponent } from './components/user/student-profile/student-profile.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +70,9 @@ import { HomeworkComponent as UserHomework } from './components/user/homework/ho
     TeacherLoginComponent,
     SmallCardComponent,
     FormComponent,
-    UserHomework
+    UserHomework,
+    StudentLoginComponent,
+    StudentProfileComponent,
   ],
   imports: [
     BrowserModule,
