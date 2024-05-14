@@ -1,3 +1,4 @@
+import { ResultInnerComponent as StudentResultInner } from './components/user/result-inner/result-inner.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/auth/login/login.component';
@@ -10,18 +11,21 @@ import { EventsComponent } from './components/teacher/events/events.component';
 import { HomeworkComponent as UserHomework } from './components/user/homework/homework.component';
 import { StudentLoginComponent } from './components/user/student-login/student-login.component';
 import { StudentProfileComponent } from './components/user/student-profile/student-profile.component';
+import { ResultComponent as StudentResult } from './components/user/result/result.component';
 
 const routes: Routes = [
-  {path:"login",component:LoginComponent},
-  {path:"login-menu",component:LoginMenuComponent},
-  {path:"teacher-login",component:TeacherLoginComponent},
-  {path:"student-login",component:StudentLoginComponent},
-  {path:"form",component:FormComponent},
+  { path: 'login', component: LoginComponent },
+  { path: 'login-menu', component: LoginMenuComponent },
+  { path: 'teacher-login', component: TeacherLoginComponent },
+  { path: 'student-login', component: StudentLoginComponent },
+  { path: 'form', component: FormComponent },
   { path: 'user-home', component: UserHome },
   { path: 'notice-events', component: EventsComponent },
   { path: 'solutions', component: SolutionsComponent },
-  {path: 'user-homework', component: UserHomework},
-  {path:"student-profile",component:StudentProfileComponent}
+  { path: 'user-homework', component: UserHomework },
+  { path: 'student-profile', component: StudentProfileComponent },
+  { path: 'student-result', component: StudentResult }, 
+  { path: 'inner-result', component: StudentResultInner },
 ];
 
 @NgModule({
