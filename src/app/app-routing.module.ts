@@ -7,6 +7,7 @@ import { TeacherLoginComponent } from './components/teacher/teacher-login/teache
 import { FormComponent } from './components/auth/form/form.component';
 import { SolutionsComponent } from './components/teacher/solutions/solutions.component';
 import { EventsComponent } from './components/teacher/events/events.component';
+import { HomeworkComponent as UserHomework } from './components/user/homework/homework.component';
 
 const routes: Routes = [
   {path:"login",component:LoginComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path:"form",component:FormComponent},
   { path: 'user-home', component: UserHome },
   { path: 'notice-events', component: EventsComponent },
-  { path: 'solutions', component: SolutionsComponent }
+  { path: 'solutions', component: SolutionsComponent },
+  {path: 'user-homework', component: UserHomework}
 ];
 
 @NgModule({

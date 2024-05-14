@@ -31,6 +31,7 @@ import { SecondaryNavbarComponent } from './components/UI/secondary-navbar/secon
 import { TeacherLoginComponent } from './components/teacher/teacher-login/teacher-login.component';
 import { SmallCardComponent } from './components/UI/small-card/small-card.component';
 import { FormComponent } from './components/auth/form/form.component';
+import { HomeworkComponent as UserHomework } from './components/user/homework/homework.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import { FormComponent } from './components/auth/form/form.component';
     TeacherLoginComponent,
     SmallCardComponent,
     FormComponent,
+    UserHomework
   ],
   imports: [
     BrowserModule,
