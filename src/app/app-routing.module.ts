@@ -7,11 +7,13 @@ import { TeacherLoginComponent } from './components/teacher/teacher-login/teache
 import { FormComponent } from './components/auth/form/form.component';
 import { SolutionsComponent } from './components/teacher/solutions/solutions.component';
 import { EventsComponent } from './components/teacher/events/events.component';
+import { StudentLoginComponent } from './components/user/student-login/student-login.component';
 
 const routes: Routes = [
   {path:"login",component:LoginComponent},
   {path:"login-menu",component:LoginMenuComponent},
   {path:"teacher-login",component:TeacherLoginComponent},
+  {path:"student-login",component:StudentLoginComponent},
   {path:"form",component:FormComponent},
   { path: 'user-home', component: UserHome },
   { path: 'notice-events', component: EventsComponent },
