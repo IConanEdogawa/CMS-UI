@@ -7,4 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class SecondaryNavbarComponent {
   @Input() path!:string
+
+  upload(){
+    document.getElementById("input-file")!.click()
+  }
 }
