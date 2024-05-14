@@ -32,6 +32,7 @@ import { TeacherLoginComponent } from './components/teacher/teacher-login/teache
 import { SmallCardComponent } from './components/UI/small-card/small-card.component';
 import { FormComponent } from './components/auth/form/form.component';
 import { StudentLoginComponent } from './components/user/student-login/student-login.component';
+import { StudentProfileComponent } from './components/user/student-profile/student-profile.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +70,7 @@ import { StudentLoginComponent } from './components/user/student-login/student-l
     SmallCardComponent,
     FormComponent,
     StudentLoginComponent,
+    StudentProfileComponent,
   ],
   imports: [
     BrowserModule,
