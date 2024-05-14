@@ -1,28 +1,38 @@
-<header class="site-header">
+<header class="{{ menuToggle }}">
   <div class="header">
-    <button class="header-btn">
-      <img src="assets/images/Menu.png" alt="menu" />
-    </button>
+    <div class="header-btn">
+      <img src="assets/images/Menu.png" alt="menu" (click)="toggleMenu()" #menuBtn />
+    </div>
     <ul class="header-list">
       <li class="header-list-item">
-        <img src="assets/images/School House.png" alt="">
-        <a href="#">Profile of School</a>
+        <a [routerLink]="['/school']">
+          <img src="assets/images/School House.png" alt="" />
+          <span> Profile of School </span>
+        </a>
       </li>
       <li class="header-list-item">
-        <img src="assets/images/US News.png" alt="">
-        <a href="#">Profile of Publication</a>
+        <a [routerLink]="['/publication']">
+          <img src="assets/images/US News.png" alt="" />
+          <span> Profile of Publication </span>
+        </a>
       </li>
       <li class="header-list-item">
-        <img src="assets/images/Office Phone.png" alt="">
-        <a href="#">Emergency contact</a>
+        <a [routerLink]="['/contact']">
+          <img src="assets/images/Office Phone.png" alt="" />
+          <span> Emergency contact </span>
+        </a>
       </li>
       <li class="header-list-item">
-        <img src="assets/images/Automatic.png" alt="">
-        <a href="#">Settings</a>
+        <a [routerLink]="['/setting']">
+          <img src="assets/images/Automatic.png" alt="" />
+          <span> Settings </span>
+        </a>
       </li>
       <li class="header-list-item">
-        <img src="assets/images/Exit.png" alt="">
-        <a href="#">Logout</a>
+        <a [routerLink]="['/login']">
+          <img src="assets/images/Exit.png" alt="" />
+          <span> Logout </span>
+        </a>
       </li>
     </ul>
   </div>
