@@ -16,6 +16,7 @@ import { QuizOptionComponent } from './components/user/quiz-option/quiz-option.c
 import { QuestionListComponent } from './components/user/question-list/question-list.component';
 import { AskQuestionComponent } from './components/user/ask-question/ask-question.component';
 import { AnswerComponent } from './components/user/answer/answer.component';
+import { ResultComponent as TeacherResultComponent } from './components/teacher/result/result.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -32,7 +33,8 @@ const routes: Routes = [
   { path: 'inner-result', component: StudentResultInner },
   { path: 'student-question-list', component:QuestionListComponent},
   { path: 'student-ask-question', component:AskQuestionComponent},
-  { path: 'student-answer', component: AnswerComponent}
+  { path: 'student-answer', component: AnswerComponent},
+  { path: 'teacher-result', component: TeacherResultComponent}
 ];
 
 @NgModule({

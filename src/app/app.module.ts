@@ -35,12 +35,14 @@ import { HomeworkComponent as UserHomework } from './components/user/homework/ho
 import { StudentLoginComponent } from './components/user/student-login/student-login.component';
 import { StudentProfileComponent } from './components/user/student-profile/student-profile.component';
 import { ResultComponent as StudentResultComponent } from './components/user/result/result.component';
+import { ResultComponent as TeacherResultComponent } from './components/teacher/result/result.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     StudentRegistrationComponent,
+    TeacherResultComponent,
     // HomeworkComponent,
     AttendanceComponent,
     StudentResultComponent,
