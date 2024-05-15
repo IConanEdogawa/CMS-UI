@@ -10,6 +10,7 @@ import { EventsComponent } from './components/teacher/events/events.component';
 import { StudentLoginComponent } from './components/user/student-login/student-login.component';
 import { StudentProfileComponent } from './components/user/student-profile/student-profile.component';
 import { QuizStartComponent } from './components/user/quiz-start/quiz-start.component';
+import { QuizOptionComponent } from './components/user/quiz-option/quiz-option.component';
 
 const routes: Routes = [
   {path:"login",component:LoginComponent},
@@ -21,7 +22,8 @@ const routes: Routes = [
   { path: 'notice-events', component: EventsComponent },
   { path: 'solutions', component: SolutionsComponent },
   {path:"student-profile",component:StudentProfileComponent},
-  {path:"quiz-start",component:QuizStartComponent}
+  {path:"quiz-start",component:QuizStartComponent},
+  {path:"quiz-options",component:QuizOptionComponent},
 ];
 
 @NgModule({
