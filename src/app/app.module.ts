@@ -30,19 +30,23 @@ import { SecondaryNavbarComponent } from './components/UI/secondary-navbar/secon
 import { TeacherLoginComponent } from './components/teacher/teacher-login/teacher-login.component';
 import { SmallCardComponent } from './components/UI/small-card/small-card.component';
 import { FormComponent } from './components/auth/form/form.component';
+import { HomeworkComponent as UserHomework } from './components/user/homework/homework.component';
 import { StudentLoginComponent } from './components/user/student-login/student-login.component';
 import { StudentProfileComponent } from './components/user/student-profile/student-profile.component';
 import { PrimaryNavbarComponent } from './components/UI/primary-navbar/primary-navbar.component';
 import { QuizStartComponent } from './components/user/quiz-start/quiz-start.component';
+import { ResultComponent as StudentResultComponent } from './components/user/result/result.component';
+import { ResultComponent as TeacherResultComponent } from './components/teacher/result/result.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     StudentRegistrationComponent,
+    TeacherResultComponent,
     // HomeworkComponent,
     AttendanceComponent,
-    // ResultComponent,
+    StudentResultComponent,
     AddMarkComponent,
     EventsComponent,
     SolutionsComponent,
@@ -69,6 +73,7 @@ import { QuizStartComponent } from './components/user/quiz-start/quiz-start.comp
     TeacherLoginComponent,
     SmallCardComponent,
     FormComponent,
+    UserHomework,
     StudentLoginComponent,
     StudentProfileComponent,
     PrimaryNavbarComponent,
