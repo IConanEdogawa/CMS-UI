@@ -11,6 +11,7 @@ import { EventsComponent } from './components/teacher/events/events.component';
 import { HomeworkComponent as UserHomework } from './components/user/homework/homework.component';
 import { StudentLoginComponent } from './components/user/student-login/student-login.component';
 import { StudentProfileComponent } from './components/user/student-profile/student-profile.component';
+import { QuizStartComponent } from './components/user/quiz-start/quiz-start.component';
 import { ResultComponent as StudentResult } from './components/user/result/result.component';
 import { QuizOptionComponent } from './components/user/quiz-option/quiz-option.component';
 import { QuestionListComponent } from './components/user/question-list/question-list.component';
@@ -25,12 +26,13 @@ const routes: Routes = [
   { path: 'user-home', component: UserHome },
   { path: 'notice-events', component: EventsComponent },
   { path: 'solutions', component: SolutionsComponent },
+  {path:"student-profile",component:StudentProfileComponent},
+  {path:"quiz-start",component:QuizStartComponent},
   { path: 'user-homework', component: UserHomework },
-  { path: 'student-profile', component:   StudentProfileComponent },
   { path: 'student-result', component: StudentResult }, 
   { path: 'inner-result', component: StudentResultInner },
   { path: 'student-question-list', component:QuestionListComponent},
-  { path: 'student-ask-question', component:AskQuestionComponent},
+  { path: 'student-ask-question', component:AskQuestionComponent}
 ];
 
 @NgModule({
