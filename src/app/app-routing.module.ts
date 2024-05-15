@@ -9,6 +9,7 @@ import { SolutionsComponent } from './components/teacher/solutions/solutions.com
 import { EventsComponent } from './components/teacher/events/events.component';
 import { StudentLoginComponent } from './components/user/student-login/student-login.component';
 import { StudentProfileComponent } from './components/user/student-profile/student-profile.component';
+import { QuizStartComponent } from './components/user/quiz-start/quiz-start.component';
 
 const routes: Routes = [
   {path:"login",component:LoginComponent},
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'user-home', component: UserHome },
   { path: 'notice-events', component: EventsComponent },
   { path: 'solutions', component: SolutionsComponent },
-  {path:"student-profile",component:StudentProfileComponent}
+  {path:"student-profile",component:StudentProfileComponent},
+  {path:"quiz-start",component:QuizStartComponent}
 ];
 
 @NgModule({

@@ -19,7 +19,6 @@ import { ResultInnerComponent } from './components/user/result-inner/result-inne
 import { QuestionListComponent } from './components/user/question-list/question-list.component';
 import { AskQuestionComponent } from './components/user/ask-question/ask-question.component';
 import { AnswerComponent } from './components/user/answer/answer.component';
-import { StartQuizComponent } from './components/user/start-quiz/start-quiz.component';
 import { QuizOptionComponent } from './components/user/quiz-option/quiz-option.component';
 import { QuizScoreComponent } from './components/user/quiz-score/quiz-score.component';
 import { ProfileComponent } from './components/user/profile/profile.component';
@@ -33,6 +32,8 @@ import { SmallCardComponent } from './components/UI/small-card/small-card.compon
 import { FormComponent } from './components/auth/form/form.component';
 import { StudentLoginComponent } from './components/user/student-login/student-login.component';
 import { StudentProfileComponent } from './components/user/student-profile/student-profile.component';
+import { PrimaryNavbarComponent } from './components/UI/primary-navbar/primary-navbar.component';
+import { QuizStartComponent } from './components/user/quiz-start/quiz-start.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,6 @@ import { StudentProfileComponent } from './components/user/student-profile/stude
     QuestionListComponent,
     AskQuestionComponent,
     AnswerComponent,
-    StartQuizComponent,
     QuizOptionComponent,
     QuizScoreComponent,
     ProfileComponent,
@@ -71,6 +71,8 @@ import { StudentProfileComponent } from './components/user/student-profile/stude
     FormComponent,
     StudentLoginComponent,
     StudentProfileComponent,
+    PrimaryNavbarComponent,
+    QuizStartComponent
   ],
   imports: [
     BrowserModule,
