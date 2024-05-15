@@ -36,12 +36,14 @@ import { StudentProfileComponent } from './components/user/student-profile/stude
 import { PrimaryNavbarComponent } from './components/UI/primary-navbar/primary-navbar.component';
 import { QuizStartComponent } from './components/user/quiz-start/quiz-start.component';
 import { ResultComponent as StudentResultComponent } from './components/user/result/result.component';
+import { ResultComponent as TeacherResultComponent } from './components/teacher/result/result.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     StudentRegistrationComponent,
+    TeacherResultComponent,
     // HomeworkComponent,
     AttendanceComponent,
     StudentResultComponent,
