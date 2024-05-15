@@ -12,11 +12,13 @@ import { HomeworkComponent as UserHomework } from './components/user/homework/ho
 import { StudentLoginComponent } from './components/user/student-login/student-login.component';
 import { StudentProfileComponent } from './components/user/student-profile/student-profile.component';
 import { ResultComponent as StudentResult } from './components/user/result/result.component';
-import { QuizOptionComponent } from './components/user/quiz-option/quiz-option.component';
 import { QuestionListComponent } from './components/user/question-list/question-list.component';
 import { AskQuestionComponent } from './components/user/ask-question/ask-question.component';
 import { AnswerComponent } from './components/user/answer/answer.component';
 import { ResultComponent as TeacherResultComponent } from './components/teacher/result/result.component';
+import { HomeComponent as TeacherHomeworkComponent } from './components/teacher/home/home.component';
+import { AttendanceComponent } from './components/teacher/attendance/attendance.component';
+import { AddMarkComponent } from './components/teacher/add-mark/add-mark.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -34,7 +36,10 @@ const routes: Routes = [
   { path: 'student-question-list', component:QuestionListComponent},
   { path: 'student-ask-question', component:AskQuestionComponent},
   { path: 'student-answer', component: AnswerComponent},
-  { path: 'teacher-result', component: TeacherResultComponent}
+  { path: 'teacher-result', component: TeacherResultComponent},
+  { path: 'teacher-homework', component: TeacherHomeworkComponent},
+  { path: 'teacher-attendance', component: AttendanceComponent},
+  { path: 'teacher-add-mark', component: AddMarkComponent}
 ];
 
 @NgModule({
