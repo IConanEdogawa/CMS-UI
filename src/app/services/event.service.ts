@@ -13,8 +13,20 @@ export class EventService {
   constructor(private http:HttpClient) { }
   baseURL = environment.baseUrl
 
- eventCreate(data:EventCreate): Observable<ResponceModel>{
-  return this.http.post<ResponceModel>(this.baseURL + "/Event/CreateEvent", data)
+ eventCreate(data:any): Observable<any>{
+  console.log(data)
+  const formData = new FormData();
+  console.log(data.photo)
+  formData.append("image", data.photo)
+  if (data !== undefined){
+    return this.http.post<any>(this.baseURL + 
+      `/Event/CreateEvent?Title=${data.title}&Date.Day=${data.date.day}&Date.Month=${data.date.month}&Date.Year=${data.date.year}&Description=${data.description}`, formData)
+      // `/Event/CreateEvent?Title=${data.title}&Date.Day=${data.date.day}&Date.Month=${data.date.month}&Date.Year=${data.date.year}&Description=${data.description}`, data)
+  }
+  else{
+    return this.http.post<any>(this.baseURL + 
+      `/Event/CreateEvent`, data);
+  }
  }
 
 }
