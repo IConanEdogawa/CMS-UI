@@ -13,6 +13,7 @@ import { StudentLoginComponent } from './components/user/student-login/student-l
 import { StudentProfileComponent } from './components/user/student-profile/student-profile.component';
 import { QuizStartComponent } from './components/user/quiz-start/quiz-start.component';
 import { QuizOptionComponent } from './components/user/quiz-option/quiz-option.component';
+import { QuizScoreComponent } from './components/user/quiz-score/quiz-score.component';
 import { ResultComponent as StudentResult } from './components/user/result/result.component';
 import { QuestionListComponent } from './components/user/question-list/question-list.component';
 import { AskQuestionComponent } from './components/user/ask-question/ask-question.component';
@@ -34,11 +35,11 @@ const routes: Routes = [
   {path:"student-profile",component:StudentProfileComponent},
   {path:"quiz-start",component:QuizStartComponent},
   {path:"quiz-options",component:QuizOptionComponent},
+  {path:"quiz-score",component:QuizScoreComponent},
   { path: 'user-homework', component: UserHomework },
   { path: 'student-result', component: StudentResult }, 
   { path: 'inner-result', component: StudentResultInner },
   { path: 'student-question-list', component:QuestionListComponent},
-
   { path: 'student-ask-question', component:AskQuestionComponent},
   { path: 'student-answer', component: AnswerComponent},
   { path: 'teacher-result', component: TeacherResultComponent},
