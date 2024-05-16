@@ -37,6 +37,7 @@ import { PrimaryNavbarComponent } from './components/UI/primary-navbar/primary-n
 import { QuizStartComponent } from './components/user/quiz-start/quiz-start.component';
 import { ResultComponent as StudentResultComponent } from './components/user/result/result.component';
 import { ResultComponent as TeacherResultComponent } from './components/teacher/result/result.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -81,7 +82,8 @@ import { ResultComponent as TeacherResultComponent } from './components/teacher/
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
