@@ -11,6 +11,7 @@ import { StudentLoginComponent } from './components/user/student-login/student-l
 import { StudentProfileComponent } from './components/user/student-profile/student-profile.component';
 import { QuizStartComponent } from './components/user/quiz-start/quiz-start.component';
 import { QuizOptionComponent } from './components/user/quiz-option/quiz-option.component';
+import { QuizScoreComponent } from './components/user/quiz-score/quiz-score.component';
 
 const routes: Routes = [
   {path:"login",component:LoginComponent},
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path:"student-profile",component:StudentProfileComponent},
   {path:"quiz-start",component:QuizStartComponent},
   {path:"quiz-options",component:QuizOptionComponent},
+  {path:"quiz-score",component:QuizScoreComponent}
 ];
 
 @NgModule({
