@@ -38,6 +38,7 @@ import { QuizStartComponent } from './components/user/quiz-start/quiz-start.comp
 import { ResultComponent as StudentResultComponent } from './components/user/result/result.component';
 import { ResultComponent as TeacherResultComponent } from './components/teacher/result/result.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -83,7 +84,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
