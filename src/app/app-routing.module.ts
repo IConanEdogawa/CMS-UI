@@ -22,13 +22,15 @@ import { ResultComponent as TeacherResultComponent } from './components/teacher/
 import { HomeComponent as TeacherHomeworkComponent } from './components/teacher/home/home.component';
 import { AttendanceComponent } from './components/teacher/attendance/attendance.component';
 import { AddMarkComponent } from './components/teacher/add-mark/add-mark.component';
+import { NotFoundComponent } from './components/UI/not-found/not-found.component';
+import { authGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'login-menu', component: LoginMenuComponent },
   { path: 'teacher-login', component: TeacherLoginComponent },
   { path: 'student-login', component: StudentLoginComponent },
-  { path: 'form', component: FormComponent },
+  { path: 'form', component: FormComponent, canActivate:[authGuard]},
   { path: 'user-home', component: UserHome },
   { path: 'notice-events', component: EventsComponent },
   { path: 'solutions', component: SolutionsComponent },
@@ -46,7 +48,8 @@ const routes: Routes = [
   { path: 'teacher-homework', component: TeacherHomeworkComponent},
   { path: 'teacher-attendance', component: AttendanceComponent},
   { path: 'teacher-add-mark', component: AddMarkComponent},
-  { path: 'student-ask-question', component:AskQuestionComponent}
+  { path: 'student-ask-question', component:AskQuestionComponent},
+  {path:"**",component:NotFoundComponent}
 ];
 
 @NgModule({

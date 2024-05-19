@@ -39,6 +39,7 @@ import { ResultComponent as StudentResultComponent } from './components/user/res
 import { ResultComponent as TeacherResultComponent } from './components/teacher/result/result.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { NotFoundComponent } from './components/UI/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -79,7 +80,8 @@ import { RouterModule } from '@angular/router';
     StudentLoginComponent,
     StudentProfileComponent,
     PrimaryNavbarComponent,
-    QuizStartComponent
+    QuizStartComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
