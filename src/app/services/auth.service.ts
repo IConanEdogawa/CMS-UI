@@ -1,25 +1,51 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { environment } from '../../environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
+  baseUrl: string = environment.baseUrl;
 
-  baseUrl: string = environment.baseUrl
-
-
-  createStudent(firstName: number, lastName: string, email: string, day: number, month: number, year: number, country: string, region: string, district: string, homeNumber: string, phoneNumber: string, parentsPhoneNumber: string, photo: File, pdf: File): Observable<any> {
-
+  createStudent(
+    firstName: number,
+    lastName: string,
+    email: string,
+    day: number,
+    month: number,
+    year: number,
+    country: string,
+    region: string,
+    district: string,
+    homeNumber: string,
+    phoneNumber: string,
+    parentsPhoneNumber: string,
+    photo: File,
+    pdf: File
+  ): Observable<any> {
     const formData = new FormData();
-    formData.append('Photo', photo)
-    formData.append('PDF', pdf)
+    formData.append('Photo', photo);
+    formData.append('PDF', pdf);
 
-    return this.http.post<any>(this.baseUrl + `/Auth/StudentRegister?FirstName=${firstName}&LastName=${lastName}&Email=${email}&DateOfBirth.Day=${day}&DateOfBirth.Month=${month}&DateOfBirth.Year=${year}&Location.Country=${country}&Location.Region=${region}&Location.District=${district}&Location.HomeNumber=${homeNumber}&PhoneNumber=${phoneNumber}&ParentsPhoneNumber=${parentsPhoneNumber}`, formData)
+    return this.http.post<any>(
+      this.baseUrl +
+        `/Auth/StudentRegister?FirstName=${firstName}&LastName=${lastName}&Email=${email}&DateOfBirth.Day=${day}&DateOfBirth.Month=${month}&DateOfBirth.Year=${year}&Location.Country=${country}&Location.Region=${region}&Location.District=${district}&Location.HomeNumber=${homeNumber}&PhoneNumber=${phoneNumber}&ParentsPhoneNumber=${parentsPhoneNumber}`,
+      formData
+    );
   }
 
+  SendEmail(email: string): Observable<any> {
+    return this.http
+      .post<any>(this.baseUrl + `/Auth/ForgotPassword?email=${email}`, {
+        email: 'test@gmail.com',
+      })
+      .pipe(map((data) => {
+        console.log(data)
+        return data
+      }))
+  }
 }

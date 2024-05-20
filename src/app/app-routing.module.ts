@@ -24,12 +24,19 @@ import { AttendanceComponent } from './components/teacher/attendance/attendance.
 import { AddMarkComponent } from './components/teacher/add-mark/add-mark.component';
 import { NotFoundComponent } from './components/UI/not-found/not-found.component';
 import { authGuard } from './guards/auth.guard';
+import { ForgotPasswordComponent } from './components/auth/forgot-password/forgot-password.component';
+import { ConfirmCodeComponent } from './components/auth/confirm-code/confirm-code.component';
+import { NewPasswordComponent } from './components/auth/new-password/new-password.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'login-menu', component: LoginMenuComponent },
   { path: 'teacher-login', component: TeacherLoginComponent },
   { path: 'student-login', component: StudentLoginComponent },
+  { path: 'forgot-password', component: ForgotPasswordComponent},
+  { path: 'confirmation', component: ConfirmCodeComponent},
+  { path: 'new-password', component: NewPasswordComponent},
+
   { path: 'form', component: FormComponent, canActivate:[authGuard]},
   { path: 'user-home', component: UserHome },
   { path: 'notice-events', component: EventsComponent },
