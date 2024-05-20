@@ -23,6 +23,19 @@
     font-size: 20px;
 }
 
+.input-handler{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.input{
+    width: 30%;
+    height: 40px;
+    font-size: 20px;
+}
+
 .real-uploader{
     display: none;
 }
