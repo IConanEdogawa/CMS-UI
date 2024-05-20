@@ -11,7 +11,10 @@ export class QuizService {
   constructor(private http:HttpClient) { }
   baseURL=environment.baseUrl
 
-  getAllQuiz():Observable<QuizGetall[]>{
-    return this.http.get<QuizGetall[]>(this.baseURL+"/Quiz/GetAllQuizes")
+  total!:number
+  score!:number
+
+  getAllQuiz():Observable<QuizGetall>{
+    return this.http.get<QuizGetall>(this.baseURL+"/Quiz/GetAllQuizes")
   }
 }

@@ -38,6 +38,9 @@ import { QuizStartComponent } from './components/user/quiz-start/quiz-start.comp
 import { ResultComponent as StudentResultComponent } from './components/user/result/result.component';
 import { ResultComponent as TeacherResultComponent } from './components/teacher/result/result.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { NotFoundComponent } from './components/UI/not-found/not-found.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -78,12 +81,15 @@ import { HttpClientModule } from '@angular/common/http';
     StudentLoginComponent,
     StudentProfileComponent,
     PrimaryNavbarComponent,
-    QuizStartComponent
+    QuizStartComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
