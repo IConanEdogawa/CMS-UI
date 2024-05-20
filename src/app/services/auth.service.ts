@@ -48,4 +48,16 @@ export class AuthService {
         return data
       }))
   }
+
+  login(email: string, password: string): Observable<any> {
+    return this.http
+      .post<any>(this.baseUrl + `/Auth/Login`, {
+        email: email,
+        password: password
+      })
+      .pipe(map((data) => {
+        console.log(data)
+        return data
+      }))
+  }
 }
