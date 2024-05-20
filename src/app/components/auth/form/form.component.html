@@ -4,30 +4,54 @@
     <div class="inner-main">
         <div data-aos="fade-right" data-aos-duration="1000" class="form-group">
             <label class="label">First name</label>
-            <input placeholder="Enter something..." class="input" type="text" required>
+            <input id="firstName" placeholder="Enter something..." class="input" type="text" required>
         </div>
         <div data-aos="fade-left" data-aos-duration="1000" class="form-group">
             <label class="label">Last name</label>
-            <input placeholder="Enter something..." class="input" type="text" required>
+            <input id="lastName" placeholder="Enter something..." class="input" type="text" required>
         </div>
         <div data-aos="fade-right" data-aos-duration="1000" class="form-group">
             <label class="label">Email</label>
-            <input placeholder="Enter something..." class="input" type="text" required>
+            <input id="email" placeholder="Enter something..." class="input" type="text" required>
+        </div>
+        <div data-aos="fade-left" data-aos-duration="1000" class="add-button-handler">
+            <p class="gender-header">Gender:</p>
+            <select [(ngModel)]="genderText" class="gender">
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+        </div>
+        <div data-aos="fade-right" data-aos-duration="1000" class="add-button-handler">
+            <p class="gender-header">Birth day:</p>
+            <input id="birthDate" class="gender" type="date">
         </div>
         <div data-aos="fade-left" data-aos-duration="1000" class="form-group">
-            <label class="label">Class</label>
-            <input placeholder="Enter something..." class="input" type="text" required>
+            <label class="label">Country</label>
+            <input id="country" placeholder="Enter something..." class="input" type="text" required>
         </div>
         <div  data-aos="fade-right" data-aos-duration="1000" class="form-group">
-            <label class="label">Subject</label>
-            <input placeholder="Enter something..." class="input" type="text" required>
+            <label class="label">Region</label>
+            <input id="region" placeholder="Enter something..." class="input" type="text" required>
         </div>
         <div data-aos="fade-left" data-aos-duration="1000"  class="form-group">
-            <label class="label">Role No.</label>
-            <input placeholder="Enter something..." class="input" type="text" required>
+            <label class="label">District</label>
+            <input id="district" placeholder="Enter something..." class="input" type="text" required>
+        </div>
+        <div data-aos="fade-right" data-aos-duration="1000"  class="form-group">
+            <label class="label">Home number</label>
+            <input id="homeNumber" placeholder="Enter something..." class="input" type="text" required>
+        </div>
+        <div data-aos="fade-left" data-aos-duration="1000"  class="form-group">
+            <label class="label">Phone number</label>
+            <input id="phoneNumber" placeholder="Enter something..." class="input" type="text" required>
+        </div>
+        <div data-aos="fade-right" data-aos-duration="1000"  class="form-group">
+            <label class="label">Parent's phone number</label>
+            <input id="parentsPhoneNumber" placeholder="Enter something..." class="input" type="text" required>
         </div>
         <div data-aos="fade-up" data-aos-duration="1000" class="add-button-handler">
             <div class="add-button">Add to contact</div>
         </div>
+
     </div>
 </div>

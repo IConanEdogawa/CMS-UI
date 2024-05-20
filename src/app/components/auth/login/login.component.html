@@ -5,13 +5,13 @@
         <div class="inputs-handler">
             <div class="form-group">
                 <label class="label">Email</label>
-                <input class="input" type="text" required>
+                <input id="email" class="input" type="text" required>
             </div>
             <div class="form-group">
                 <label class="label">Password</label>
-                <input class="input" type="password" required>
+                <input id="password" class="input" type="password" required>
             </div>
-            <button data-aos="fade-up" data-aos-duration="2500" class="login-btn">Login</button>
+            <button (click)="login()" data-aos="fade-up" data-aos-duration="2500" class="login-btn">Login</button>
             <div data-aos="fade-up" data-aos-duration="3000" class="forgot-handler">
                 <a class="forgot" href="">Forgot Password?</a>
             </div>
