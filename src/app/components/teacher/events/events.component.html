@@ -1,16 +1,30 @@
 <div class="upper-main">
-    <app-navbar />
-    <div class="main">
-        <div class="inner-main">
-            <div data-aos="flip-up" data-aos-duration="1000">
-                <p class="description">Enter details</p>
-                <textarea class="textarea"></textarea>
-            </div>
-    
-            <input id="real-input" class="real-uploader" type="file">
-            <button data-aos="fade-right" data-aos-duration="1000" class="upload-image" (click)="upload()">Upload image</button>
-    
-            <div data-aos="fade-up" data-aos-duration="1000" class="send">Send</div>
-        </div>
+  <app-navbar />
+  <div class="main">
+    <div class="inner-main">
+      <div class="input-handler" data-aos="flip-up" data-aos-duration="1000">
+        <input id="Title" class="input" type="text" placeholder="Title" />
+      </div>
+      <div class="input-handler" data-aos="flip-up" data-aos-duration="1000">
+        <input id="date" class="input" type="date" />
+      </div>
+      <div data-aos="flip-up" data-aos-duration="1000">
+        <p class="description">Enter details</p>
+        <textarea id="description" class="textarea"></textarea>
+      </div>
+
+      <input id="real-input" class="real-uploader" type="file" (change)="onFileSelected($event)" accept="image/*" />
+      <button
+        data-aos="fade-right"
+        data-aos-duration="1000"
+        class="upload-image"
+        (click)="upload()"
+      >
+        Upload image
+      </button>
+
+      <div (click)="eventCreated()" data-aos="fade-up" data-aos-duration="1000" class="send">Send</div>
+ 
     </div>
+  </div>
 </div>
