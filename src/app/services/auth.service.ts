@@ -14,12 +14,11 @@ export class AuthService {
 
 
   createStudent(firstName: string, lastName: string, email: string, day: number, month: number, year: number, country: string, region: string, district: string, homeNumber: string, phoneNumber: string, parentsPhoneNumber: string, photo: File, pdf: File): Observable<any> {
-
-
-
-
     return this.http.post<any>(this.baseUrl + `/Auth/StudentRegister?FirstName=${firstName}&LastName=${lastName}&Email=${email}&DateOfBirth.Day=${day}&DateOfBirth.Month=${month}&DateOfBirth.Year=${year}&Location.Country=${country}&Location.Region=${region}&Location.District=${district}&Location.HomeNumber=${homeNumber}&PhoneNumber=${phoneNumber}&ParentsPhoneNumber=${parentsPhoneNumber}`,{})
-
+  }
+  
+  createTeacher(firstName: string, lastName: string, email: string, gender:number, day: number, month: number, year: number, country: string, region: string, district: string, homeNumber: string, phoneNumber: string, parentsPhoneNumber: string): Observable<any> {
+    return this.http.post<any>(this.baseUrl + `/Auth/TeacherRegister?FirstName=${firstName}&LastName=${lastName}&Email=${email}&Gender=${gender}&BirthDate.Day=${day}&BirthDate.Month=${month}&BirthDate.Year=${year}&PhoneNumber=${phoneNumber}&Location.Country=${country}&Location.Region=${region}&Location.District=${district}&Location.HomeNumber=${homeNumber}`,{})
   }
 
   SendEmail(email: string): Observable<any> {

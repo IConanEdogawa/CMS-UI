@@ -41,6 +41,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { NotFoundComponent } from './components/UI/not-found/not-found.component';
 import { FormsModule } from '@angular/forms';
+import { CreateTeacherComponent } from './components/auth/create-teacher/create-teacher.component';
 
 @NgModule({
   declarations: [
@@ -82,7 +83,8 @@ import { FormsModule } from '@angular/forms';
     StudentProfileComponent,
     PrimaryNavbarComponent,
     QuizStartComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    CreateTeacherComponent,
   ],
   imports: [
     BrowserModule,

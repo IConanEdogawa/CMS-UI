@@ -27,6 +27,7 @@ import { authGuard } from './guards/auth.guard';
 import { ForgotPasswordComponent } from './components/auth/forgot-password/forgot-password.component';
 import { ConfirmCodeComponent } from './components/auth/confirm-code/confirm-code.component';
 import { NewPasswordComponent } from './components/auth/new-password/new-password.component';
+import { CreateTeacherComponent } from './components/auth/create-teacher/create-teacher.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -36,6 +37,7 @@ const routes: Routes = [
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'confirmation', component: ConfirmCodeComponent },
   { path: 'new-password', component: NewPasswordComponent },
+  { path:'create-teacher',component:CreateTeacherComponent},
 
   { path: 'form', component: FormComponent, canActivate: [authGuard] },
   { path: 'user-home', component: UserHome },
