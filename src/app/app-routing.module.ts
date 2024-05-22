@@ -28,6 +28,7 @@ import { ForgotPasswordComponent } from './components/auth/forgot-password/forgo
 import { ConfirmCodeComponent } from './components/auth/confirm-code/confirm-code.component';
 import { NewPasswordComponent } from './components/auth/new-password/new-password.component';
 import { CreateTeacherComponent } from './components/auth/create-teacher/create-teacher.component';
+import { CreateClassComponent } from './components/admin/create-class/create-class.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -58,6 +59,7 @@ const routes: Routes = [
   { path: 'teacher-attendance', component: AttendanceComponent },
   { path: 'teacher-add-mark', component: AddMarkComponent },
   { path: 'student-ask-question', component: AskQuestionComponent },
+  {path:"create-class",component:CreateClassComponent},
   { path: '**', component: NotFoundComponent },
 ];
 

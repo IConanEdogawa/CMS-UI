@@ -10,6 +10,8 @@ export class FormComponent {
 
   constructor(private authService: AuthService) { }
 
+  response:string=""
+
   firstName!: string
   lastName!: string
   email!: string
@@ -61,9 +63,19 @@ export class FormComponent {
       this.district, this.homeNumber, this.phoneNumber,
       this.parentsPhoneNumber, this.photo, this.pdf).subscribe({
         next: (data) => {
+          if(data.isSuccess==true)
+          {
+            this.response="Student created 👨🏿‍🎓"
+          }
+          else{
+            this.response=data.message
+          }
+          document.getElementById("launch")?.click()
           console.log(data)
         },
         error: (err) => {
+          this.response=err.error.title
+          document.getElementById("launch")?.click()
           console.log(err)
         }
       })
