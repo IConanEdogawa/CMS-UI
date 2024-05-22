@@ -9,6 +9,8 @@ import { AuthService } from '../../../services/auth.service';
 export class CreateTeacherComponent {
   constructor(private authService: AuthService) { }
 
+  response:string=""
+
   firstName!: string
   lastName!: string
   email!: string
@@ -55,9 +57,19 @@ export class CreateTeacherComponent {
 
     this.authService.createTeacher(this.firstName,this.lastName,this.email,this.gender,this.day,this.month,this.year,this.country,this.region,this.district,this.homeNumber,this.phoneNumber,this.parentsPhoneNumber).subscribe({
         next: (data) => {
+          if(data.isSuccess==true)
+          {
+            this.response="Teacher created 🥸"
+          }
+          else{
+            this.response=data.message
+          }
+          document.getElementById("launch")?.click()
           console.log(data)
         },
         error: (err) => {
+          this.response=err.error.title
+          document.getElementById("launch")?.click()
           console.log(err)
         }
       })
