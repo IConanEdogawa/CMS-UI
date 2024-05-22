@@ -8,7 +8,9 @@ import { TeacherService } from '../../../services/teacher.service';
 })
 export class CreateClassComponent {
 
-  constructor(private teacherService:TeacherService){}
+  constructor(private teacherService:TeacherService){
+    
+  }
 
   teachers!:any
 
