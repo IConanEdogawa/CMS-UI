@@ -45,7 +45,7 @@ const routes: Routes = [
   { path: 'notice-events', component: EventsComponent },
   { path: 'solutions', component: SolutionsComponent },
   { path: 'student-profile', component: StudentProfileComponent },
-  { path: 'quiz-Fstart', component: QuizStartComponent },
+  { path: 'quiz-start', component: QuizStartComponent },
   { path: 'quiz-options', component: QuizOptionComponent },
   { path: 'quiz-score', component: QuizScoreComponent },
   { path: 'user-homework', component: UserHomework },
