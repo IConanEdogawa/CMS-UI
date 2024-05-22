@@ -1,12 +1,13 @@
 <div class="upper-main">
   <app-navbar />
+  <div></div>
   <div class="main">
     <div class="inner-main">
       <div class="input-handler" data-aos="flip-up" data-aos-duration="1000">
-        <input id="Title" class="input" type="text" placeholder="Title" />
+        <input id="Title" class="input" type="text" placeholder="Title" style="width: 100%;"/>
       </div>
       <div class="input-handler" data-aos="flip-up" data-aos-duration="1000">
-        <input id="date" class="input" type="date" />
+        <input id="date" class="input" type="date" style="width: 100%;"/>
       </div>
       <div data-aos="flip-up" data-aos-duration="1000">
         <p class="description">Enter details</p>
@@ -24,6 +25,8 @@
       </button>
 
       <div (click)="eventCreated()" data-aos="fade-up" data-aos-duration="1000" class="send">Send</div>
+
+      <div style="height: 90px; width: 100%;"></div>
  
     </div>
   </div>

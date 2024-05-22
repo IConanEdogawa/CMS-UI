@@ -8,7 +8,7 @@
     *{
      color: #fff;
    }
-   position: relative;
+   position: fixed;
    .header-btn{
       background-color: transparent;
       color: #0c46c4;
@@ -42,6 +42,10 @@
           font-size: 1.2rem;
         }
       }
+   }
+
+   .active{
+      background-color: #ffffff59 !important;
    }
 }
 

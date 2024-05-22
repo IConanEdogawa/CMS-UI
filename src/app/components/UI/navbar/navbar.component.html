@@ -1,47 +1,47 @@
-<header data-aos="fade-right" data-aos-duration="1000" class="{{ menuToggle }}" #homeworkHeader>
+<header data-aos="fade-right" data-aos-duration="1000" class="{{ menuToggle }}" #homeworkHeader class="aaa">
   <div class="header">
     <div class="header-btn">
       <img src="assets/images/Menu.png" alt="menu" (click)="toggleMenu()" #menuBtn />
     </div>
     <ul class="header-list">
       <li class="header-list-item">
-        <a [routerLink]="['/teacher-attendance']">
+        <a [routerLink]="['/teacher-attendance']" routerLinkActive="active">
           <img src="assets/images/School House.png" alt="" />
           <span> Attendance </span>
         </a>
       </li>
       <li class="header-list-item">
-        <a [routerLink]="['/teacher-homework']">
+        <a [routerLink]="['/teacher-homework']"routerLinkActive="active">
           <img src="assets/images/US News.png" alt="" />
           <span> Homework </span>
         </a>
       </li>
       <li class="header-list-item">
-        <a [routerLink]="['/teacher-result']">
+        <a routerLinkActive="active" [routerLink]="['/teacher-result']">
           <img src="assets/images/Office Phone.png" alt="" />
           <span> Result </span>
         </a>
       </li>
       <li class="header-list-item">
-        <a>
+        <a routerLinkActive="active">
           <img src="assets/images/Automatic.png" alt="" />
           <span> Exam Routine </span>
         </a>
       </li>
       <li class="header-list-item">
-        <a [routerLink]="['/solutions']">
+        <a routerLinkActive="active" [routerLink]="['/solutions']">
           <img src="assets/images/Automatic.png" alt="" />
           <span> Solution </span>
         </a>
       </li>
       <li class="header-list-item">
-        <a [routerLink]="['/notice-events']">
+        <a routerLinkActive="active" [routerLink]="['/notice-events']">
           <img src="assets/images/Automatic.png" alt="" />
           <span> Notice & Event </span>
         </a>
       </li>
       <li class="header-list-item">
-        <a [routerLink]="['/login']">
+        <a routerLinkActive="active" [routerLink]="['/login']">
           <img src="assets/images/Exit.png" alt="" />
           <span> Logout </span>
         </a>

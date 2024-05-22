@@ -34,8 +34,16 @@ button{
 .site-main{
   display: flex;
   gap: 20px;
+  // padding-left: 260px !important;
   
   *{
     color: black;
   }
+}
+
+// .main{
+// }
+
+section, .main{
+  margin-left: 260px;
 }

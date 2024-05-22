@@ -2,12 +2,17 @@
     overflow: hidden;
 }
 
+.aaa{
+    margin: 0 !important;
+}
+
 .main{
     width: 100%;
     display: flex;
     justify-content: center;
     position: relative;
     bottom: 50px;
+    margin: 0;
 }
 
 .inputs-handler{
