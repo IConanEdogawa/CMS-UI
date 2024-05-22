@@ -1,4 +1,4 @@
-<app-secondary-navbar path="../../../../assets/images/add-icon.png" (photo)="catchFile($event)"/>
+<app-secondary-navbar path="../../../../assets/images/add-icon.png" (photo)="catchFile($event)" />
 
 <div class="main">
     <div class="inner-main">
@@ -29,19 +29,19 @@
             <label class="label">Country</label>
             <input id="country" placeholder="Enter something..." class="input" type="text" required>
         </div>
-        <div  data-aos="fade-right" data-aos-duration="1000" class="form-group">
+        <div data-aos="fade-right" data-aos-duration="1000" class="form-group">
             <label class="label">Region</label>
             <input id="region" placeholder="Enter something..." class="input" type="text" required>
         </div>
-        <div data-aos="fade-left" data-aos-duration="1000"  class="form-group">
+        <div data-aos="fade-left" data-aos-duration="1000" class="form-group">
             <label class="label">District</label>
             <input id="district" placeholder="Enter something..." class="input" type="text" required>
         </div>
-        <div data-aos="fade-right" data-aos-duration="1000"  class="form-group">
+        <div data-aos="fade-right" data-aos-duration="1000" class="form-group">
             <label class="label">Home number</label>
             <input id="homeNumber" placeholder="Enter something..." class="input" type="text" required>
         </div>
-        <div data-aos="fade-left" data-aos-duration="1000"  class="form-group">
+        <div data-aos="fade-left" data-aos-duration="1000" class="form-group">
             <label class="label">Phone number</label>
             <input id="phoneNumber" placeholder="Enter something..." class="input" type="text" required>
         </div>
@@ -49,5 +49,30 @@
             <div (click)="createTeacher()" class="add-button">Create</div>
         </div>
 
+    </div>
+</div>
+
+<!-- Button trigger modal -->
+<button id="launch" type="button" class="unvisable btn btn-primary" data-bs-toggle="modal"
+    data-bs-target="#exampleModal">
+    Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Creating teacher</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                {{response}}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Ok</button>
+            </div>
+        </div>
     </div>
 </div>

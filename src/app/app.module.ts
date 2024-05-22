@@ -42,6 +42,7 @@ import { RouterModule } from '@angular/router';
 import { NotFoundComponent } from './components/UI/not-found/not-found.component';
 import { FormsModule } from '@angular/forms';
 import { CreateTeacherComponent } from './components/auth/create-teacher/create-teacher.component';
+import { CreateClassComponent } from './components/admin/create-class/create-class.component';
 
 @NgModule({
   declarations: [
@@ -85,6 +86,7 @@ import { CreateTeacherComponent } from './components/auth/create-teacher/create-
     QuizStartComponent,
     NotFoundComponent,
     CreateTeacherComponent,
+    CreateClassComponent,
   ],
   imports: [
     BrowserModule,
