@@ -25,12 +25,11 @@
         <div class="attendance-choose">
           <select name="" id="" (change)="onChangeClass($event)">
             <option value="" hidden selected>Choose your class</option>
-            <!-- for -->
-            @for (class of classList.$values; track classList.$values.name){
+            @if (classList) {@for (class of classList.$values; track classList.$values.name){
             <option value="{{ class.id }}">
               {{ class.grade }}-{{ class.name }}
             </option>
-            }
+            }}
           </select>
           <select name="" id="" (change)="onChangeLesson($event)">
             <option value="" hidden selected>Choose your lesson</option>
