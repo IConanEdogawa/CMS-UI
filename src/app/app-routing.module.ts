@@ -38,7 +38,7 @@ const routes: Routes = [
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'confirmation', component: ConfirmCodeComponent },
   { path: 'new-password', component: NewPasswordComponent },
-  { path:'create-teacher',component:CreateTeacherComponent},
+  { path:'create-user',component:CreateTeacherComponent},
 
   { path: 'form', component: FormComponent, canActivate: [authGuard] },
   { path: 'user-home', component: UserHome },
