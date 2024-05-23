@@ -17,4 +17,8 @@ export class ClassService {
     return this.http
       .get<any>(this.baseUrl + `Class/GetAllClasses`)
   } 
+
+  create(body:any):Observable<any>{
+    return this.http.post<any>(environment.baseUrl+"/Class/CreateClass",body)
+  }
 }
