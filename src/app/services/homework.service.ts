@@ -14,6 +14,6 @@ export class HomeworkService {
 
   CreateHomework(data: any): Observable<any> {
     return this.http
-      .post<any>(this.baseUrl + `Homework/CreateHomework`, data)
+      .post<any>(this.baseUrl + `/Homework/CreateHomework`, data)
   }
 }

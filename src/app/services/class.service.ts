@@ -15,7 +15,7 @@ export class ClassService {
 
   GetAllClasses(): Observable<any> {
     return this.http
-      .get<any>(this.baseUrl + `Class/GetAllClasses`)
+      .get<any>(this.baseUrl + `/Class/GetAllClasses`)
   } 
 
   create(body:any):Observable<any>{

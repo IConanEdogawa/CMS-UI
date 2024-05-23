@@ -15,11 +15,11 @@ export class LessonService {
 
   GettAllLessons(): Observable<any> {
     return this.http
-      .get<any>(this.baseUrl + `Lesson/GetAllLessons`)
+      .get<any>(this.baseUrl + `/Lesson/GetAllLessons`)
   }
 
   GetByIdLesson(id: number): Observable<any> {
     return this.http
-      .get<any>(this.baseUrl + `Lesson/GetAllLessonsByClassId?Id=${id}`)
+      .get<any>(this.baseUrl + `/Lesson/GetAllLessonsByClassId?Id=${id}`)
   }
 }

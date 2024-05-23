@@ -13,6 +13,6 @@ export class StudentService {
   baseUrl: string = environment.baseUrl
 
   StudentGetById(classId: number): Observable<any> {
-    return this.http.get<any>(`${this.baseUrl}Student/GetStudentsByClassId?id=${classId}`)
+    return this.http.get<any>(`${this.baseUrl}/Student/GetStudentsByClassId?id=${classId}`)
   }
 }
