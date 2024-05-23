@@ -4,6 +4,10 @@
   justify-content: center;
   margin-top: 80px;
 
+  p{
+    margin: 0;
+  }
+
   .attendance {
     width: 100%;
     max-width: 1000px;
@@ -67,6 +71,7 @@
       p {
         font-size: 20px;
         font-weight: 500;
+        margin: 0;
       }
     }
 

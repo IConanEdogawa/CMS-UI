@@ -18,10 +18,10 @@ export class SelectComponent {
   onChangeClass(event: any) {
     console.log(event.target.value);
 
-    this.classService
-      .GetAllClasses().subscribe((res) => {
-        console.log(res);
-      });
+    // this.classService
+    //   .GetAllClasses().subscribe((res) => {
+    //     console.log(res);
+    //   });
     
   }
 
