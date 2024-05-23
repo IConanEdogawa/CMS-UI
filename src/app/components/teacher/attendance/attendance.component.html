@@ -22,7 +22,27 @@
             </div>
           </div>
         </div>
+        <div class="attendance-choose">
+          <select name="" id="" (change)="onChangeClass($event)">
+            <option value="" hidden selected>Choose your class</option>
+            <!-- for -->
+            @for (class of classList.$values; track classList.$values.name){
+            <option value="{{ class.id }}">
+              {{ class.grade }}-{{ class.name }}
+            </option>
+            }
+          </select>
+          <select name="" id="" (change)="onChangeLesson($event)">
+            <option value="" hidden selected>Choose your lesson</option>
+            @if (lessonList){ @for (lesson of lessonList.$values; track
+            lessonList.$values.theme){
+            <option value="{{ lesson.id }}">{{ lesson.theme }}</option>
+            } }
+          </select>
+        </div>
         <div class="attendance-table__body">
+          @if (studentList){ @for (student of studentList.$values; track
+          studentList.$values.theme){
           <div class="attendance-table__body-row">
             <div class="attendance-table-body__item">
               <p>John Doe</p>
@@ -39,6 +59,9 @@
               </div>
             </div>
           </div>
+          } } @else{
+          <h1>Please choose class and lesson</h1>
+          }
         </div>
       </div>
     </div>

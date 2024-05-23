@@ -1,20 +1,20 @@
-.attendance-section{
+.attendance-section {
   width: 100%;
   display: flex;
   justify-content: center;
   margin-top: 80px;
 
-  .attendance{
+  .attendance {
     width: 100%;
     max-width: 1000px;
   }
-  
-  .attendance-title{
-     padding: 10px;
+
+  .attendance-title {
+    padding: 10px;
     background-color: rgba(65, 105, 225, 0.689);
     display: flex;
     justify-content: space-between;
-    *{
+    * {
       color: white;
     }
     width: 100%;
@@ -28,8 +28,8 @@
 
   // .attendance-table{
   // }
-  
-  .attendance-table__header{
+
+  .attendance-table__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,63 +37,74 @@
     background-color: rgba(65, 105, 225, 0.689);
     padding: 10px 20px;
 
-    *{
-      color:  white;
+    * {
+      color: white;
     }
-    
-    .flex{
+
+    .flex {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       gap: 40px;
     }
-    &>.attendance-table-header__item{
+    & > .attendance-table-header__item {
       width: 100%;
     }
     // padding: 10px 20px;
   }
 
-  .attendance-table__body{
-    .attendance-table__body-row{
+  .attendance-table__body {
+    .attendance-table__body-row {
       border-bottom: 1px solid rgba(0, 0, 0, 0.5);
       display: flex;
       justify-content: space-between;
-      padding: 10px 20px ;
+      padding: 10px 20px;
     }
 
-    .attendance-table-body__item{
+    .attendance-table-body__item {
       padding: 20px 0;
 
-      p{
+      p {
         font-size: 20px;
         font-weight: 500;
-      
       }
     }
-    
-    .flex{
+
+    .flex {
       display: flex;
       gap: 40px;
-      .attendance-table-body__item{
+      .attendance-table-body__item {
         width: 52px;
         display: flex;
         justify-content: center;
         align-items: center;
-        
-        input{
+
+        input {
           width: 20px;
           height: 20px;
           padding: 10px;
         }
-        
-        span{
+
+        span {
           // display: inline-block;
           padding: 10px;
           border: solid 2px royalblue;
         }
       }
     }
-    
   }
 
+  .attendance-choose{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // margin: 20px 0;
+    padding: 30px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    select{
+      width: 300px;
+      height: 40px;
+      font-size: 22px;
+    }
+  }
 }

@@ -1,14 +1,22 @@
+import { environment } from './../../environments/environment.development';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ClassService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private readonly http: HttpClient) { }
+
+  baseUrl: string = environment.baseUrl
+  
+
+  GetAllClasses(): Observable<any> {
+    return this.http
+      .get<any>(this.baseUrl + `Class/GetAllClasses`)
+  } 
 
   create(body:any):Observable<any>{
     return this.http.post<any>(environment.baseUrl+"/Class/CreateClass",body)
