@@ -14,13 +14,30 @@
         </p>
       </div>
       <div class="homework-media__wrapper">
-        <h3>Subject</h3>
+        <h3>Homework</h3>
+        <div class="attendance-choose d-flex">
+          <select name="" id="" class="form-select form-select-lg" (change)="onChangeClass($event)">
+            <option value="" hidden selected>Choose your class</option>
+            @if (classList) {@for (class of classList.$values; track classList.$values.name){
+            <option value="{{ class.id }}">
+              {{ class.grade }}-{{ class.name }}
+            </option>
+            }}
+          </select>
+          <select name="" id="" class="form-select form-select-lg" (change)="onChangeLesson($event)">
+            <option value="" hidden selected>Choose your lesson</option>
+            @if (lessonList){ @for (lesson of lessonList.$values; track
+            lessonList.$values.theme){
+            <option value="{{ lesson.id }}">{{ lesson.theme }}</option>
+            } }
+          </select>
+        </div>
         <label for="input">
           Add homework
-          <input type="text" />
+          <input type="text" id="homeworkTz"/>
         </label>
         <div class="btn-wrapper">
-          <button>Submit</button>
+          <button (click)="submit()">Submit</button>
         </div>
         <div class="file-wrapper">
           <input type="file" />
