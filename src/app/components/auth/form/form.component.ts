@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../../services/auth.service';
+import { ClassService } from '../../../services/class.service';
 
 @Component({
   selector: 'app-form',
@@ -8,7 +9,13 @@ import { AuthService } from '../../../services/auth.service';
 })
 export class FormComponent {
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private  classService: ClassService) {
+    this.classService.GetAllClasses().subscribe
+    ((res) => {
+      console.log(res);
+      this.classList = res;
+    });
+   }
 
   response:string=""
 
@@ -27,9 +34,15 @@ export class FormComponent {
   parentsPhoneNumber!: string
   photo!: File
   pdf!: File
-
+  classList!: any
+  classId!: number
   genderText!: string
   birthDate!: HTMLInputElement
+
+
+  onChange(event: any) {
+    this.classId = event.target.value
+  }
 
   catchFile(cachedPhoto: File) {
     console.log("fayl nomi:")
@@ -61,7 +74,7 @@ export class FormComponent {
       this.firstName, this.lastName, this.email, this.day,
       this.month, this.year, this.country, this.region,
       this.district, this.homeNumber, this.phoneNumber,
-      this.parentsPhoneNumber, this.photo, this.pdf).subscribe({
+      this.parentsPhoneNumber, this.photo, this.pdf, this.classId).subscribe({
         next: (data) => {
           if(data.isSuccess==true)
           {

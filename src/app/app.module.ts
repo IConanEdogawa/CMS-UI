@@ -45,6 +45,7 @@ import { CreateTeacherComponent } from './components/auth/create-teacher/create-
 import { CreateClassComponent } from './components/admin/create-class/create-class.component';
 import { SelectComponent } from './components/UI/select/select.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
