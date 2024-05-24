@@ -5,7 +5,11 @@
   margin-top: 80px;
 
   .attendance{
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 1000px;
   }
   
   .attendance-title{
@@ -25,8 +29,9 @@
     font-size: 25px;
   }
 
-  // .attendance-table{
-  // }
+  .attendance-table{
+    width: 100%;
+  }
   
   .attendance-table__header{
     display: flex;
