@@ -49,10 +49,26 @@
             <label class="label">Parent's phone number</label>
             <input id="parentsPhoneNumber" placeholder="Enter something..." class="input" type="text" required>
         </div>
+        <div data-aos="fade-right" data-aos-duration="1000"  class="form-group">
+            <div class="mb-3">
+                <select
+                    class="form-select form-select-lg"
+                    name=""
+                    id=""
+                >
+                    <option selected hidden>Choose student's class</option>
+                    @if (classList) {@for (class of classList.$values; track classList.$values.name){
+                        <option value="{{ class.id }}">
+                          {{ class.grade }}-{{ class.name }}
+                        </option>
+                        }}
+                </select>
+            </div>
+            
+        </div>
         <div data-aos="fade-up" data-aos-duration="1000" class="add-button-handler">
             <div (click)="createStudent()" class="add-button">Create</div>
         </div>
-
     </div>
 </div>
 

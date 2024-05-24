@@ -40,26 +40,35 @@
           </select>
         </div>
         <div class="attendance-table__body">
-          @if (studentList){ @for (student of studentList.$values; track
-          studentList.$values.theme){
-          <div class="attendance-table__body-row">
-            <div class="attendance-table-body__item">
-              <p>John Doe</p>
-            </div>
-
-            <div class="flex">
-              <div class="attendance-table-body__item">
-                <!-- <span></span> -->
-                <input type="checkbox" name="" id="" />
+          @if (studentList){ 
+            @if (studentList.$values > 0){ @for (student of studentList.$values; track
+              studentList.$values.theme){
+              <div class="attendance-table__body-row">
+                <div class="attendance-table-body__item">
+                  <p>John Doe</p>
+                </div>
+    
+                <div class="flex">
+                  <div class="attendance-table-body__item">
+                    <!-- <span></span> -->
+                    <input type="checkbox" name="" id="" />
+                  </div>
+                  <div class="attendance-table-body__item">
+                    <input type="checkbox" name="" id="" />
+                    <!-- <span></span> -->
+                  </div>
+                </div>
               </div>
-              <div class="attendance-table-body__item">
-                <input type="checkbox" name="" id="" />
-                <!-- <span></span> -->
-              </div>
+              }
+            } @else {
+              <div class="alert alert-info" role="alert">
+                <strong>Heads up!</strong> No students found.
             </div>
-          </div>
-          } } @else{
-          <h1>Please choose class and lesson</h1>
+            }
+          } @else{
+            <div class="alert alert-warning" role="alert">
+              <strong>Warning!</strong> Choose your class and lesson first.
+            </div>
           }
         </div>
       </div>

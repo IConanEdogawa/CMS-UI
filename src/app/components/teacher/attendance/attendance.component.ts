@@ -18,7 +18,8 @@ export class AttendanceComponent implements OnInit {
     private readonly lessonService: LessonService,
     private readonly studentService: StudentService
   ) {
-    this.classService.GetAllClasses().subscribe((res) => {
+    this.classService.GetAllClasses().subscribe
+    ((res) => {
       console.log(res);
       this.classList = res;
     });
@@ -31,6 +32,7 @@ export class AttendanceComponent implements OnInit {
   onChangeClass(event: any) {
     console.log(event.target.value);
     this.classId = event.target.value;
+    // debugger;
     this.lessonService.GetByIdLesson(event.target.value).subscribe((res) => {
       this.lessonList = res;
       console.log(this.lessonList);
