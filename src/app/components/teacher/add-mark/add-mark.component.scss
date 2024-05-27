@@ -32,7 +32,19 @@
   .attendance-table{
     width: 100%;
   }
-  
+  .attendance-choose{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // margin: 20px 0;
+    padding: 30px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    select{
+      width: 300px;
+      height: 40px;
+      font-size: 22px;
+    }
+  }
   .attendance-table__header{
     display: flex;
     align-items: center;
