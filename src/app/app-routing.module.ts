@@ -63,7 +63,7 @@ const routes: Routes = [
   { path: 'teacher-add-mark', component: AddMarkComponent },
   {path:"create-class",component:CreateClassComponent},
   {path: "teacher-questions",component:TeacherQuestionsComponent},
-  
+  {path:"",component:LoginMenuComponent},
   { path: '**', component: NotFoundComponent },
 ];
 

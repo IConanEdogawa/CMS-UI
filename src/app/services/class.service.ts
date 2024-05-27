@@ -12,13 +12,17 @@ export class ClassService {
 
   baseUrl: string = environment.baseUrl
   
-
   GetAllClasses(): Observable<any> {
     return this.http
       .get<any>(this.baseUrl + `/Class/GetAllClasses`)
   } 
+  data = new FormData();
 
   create(body:any):Observable<any>{
-    return this.http.post<any>(environment.baseUrl+"/Class/CreateClass",body)
+    console.log(body)
+    this.data.append("Name",body.name)
+    this.data.append("Grade",body.grade)
+    this.data.append("TeacherId",body.teacherId)
+    return this.http.post<any>(environment.baseUrl+"/Class/CreateClass",this.data)
   }
 }

@@ -20,8 +20,11 @@ export class AuthService {
     return this.http.post<any>(this.baseUrl + `/Auth/StudentRegister?FirstName=${firstName}&LastName=${lastName}&Email=${email}&DateOfBirth.Day=${day}&DateOfBirth.Month=${month}&DateOfBirth.Year=${year}&Location.Country=${country}&Location.Region=${region}&Location.District=${district}&Location.HomeNumber=${homeNumber}&ClassId=${classId}&PhoneNumber=${phoneNumber}&ParentsPhoneNumber=${parentsPhoneNumber}`,form)
   }
   
-  createTeacher(firstName: string, lastName: string, email: string, gender:number, day: number, month: number, year: number, country: string, region: string, district: string, homeNumber: string, phoneNumber: string, parentsPhoneNumber: string): Observable<any> {
-    return this.http.post<any>(this.baseUrl + `/Auth/TeacherRegister?FirstName=${firstName}&LastName=${lastName}&Email=${email}&Gender=${gender}&BirthDate.Day=${day}&BirthDate.Month=${month}&BirthDate.Year=${year}&PhoneNumber=${phoneNumber}&Location.Country=${country}&Location.Region=${region}&Location.District=${district}&Location.HomeNumber=${homeNumber}`,{})
+  createTeacher(firstName: string, lastName: string, email: string, gender:number, day: number, month: number, year: number, country: string, region: string, district: string, homeNumber: string, phoneNumber: string, parentsPhoneNumber: string,photo:File,pdf:File): Observable<any> {
+    let form=new FormData()
+    form.append("photo",photo)
+    form.append("pdf",pdf)
+    return this.http.post<any>(this.baseUrl + `/Auth/TeacherRegister?FirstName=${firstName}&LastName=${lastName}&Email=${email}&Gender=${gender}&BirthDate.Day=${day}&BirthDate.Month=${month}&BirthDate.Year=${year}&PhoneNumber=${phoneNumber}&Location.Country=${country}&Location.Region=${region}&Location.District=${district}&Location.HomeNumber=${homeNumber}`,form)
   }
 
   SendEmail(email: string): Observable<any> {

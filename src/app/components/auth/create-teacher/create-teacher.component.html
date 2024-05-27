@@ -46,6 +46,10 @@
             <input id="phoneNumber" placeholder="Enter something..." class="input" type="text" required>
         </div>
         <div data-aos="fade-up" data-aos-duration="1000" class="add-button-handler">
+            <div (click)="trigger()" class="input-trigger">upload documents</div>
+            <input (change)="getPDF($event)" id="unvisable" class="unvisible-input" type="text" type="file">
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1000" class="add-button-handler">
             <div (click)="createTeacher()" class="add-button">Create</div>
         </div>
 

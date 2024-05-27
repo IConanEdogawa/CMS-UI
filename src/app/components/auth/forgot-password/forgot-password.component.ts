@@ -26,7 +26,10 @@ export class ForgotPasswordComponent {
       this.authService.SendEmail(this.email).subscribe(res => {
         console.log(res);
         this.email = "";
-        this.router.navigate(['/login']);
+        window.alert(res.message)
+        if(res.isSuccess){
+          this.router.navigate(['/login']);
+        }
         return res;
       }, err => {
         console.log(err);
