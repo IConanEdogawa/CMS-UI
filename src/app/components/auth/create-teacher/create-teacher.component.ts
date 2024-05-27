@@ -31,8 +31,15 @@ export class CreateTeacherComponent {
   birthDate!: HTMLInputElement
 
   catchFile(cachedPhoto: File) {
-    console.log("fayl nomi:")
-    console.log(cachedPhoto.name)
+    this.photo=cachedPhoto
+  }
+
+  getPDF(pdf:any){
+    this.pdf=pdf.target.files[0]
+  }
+
+  trigger(){
+    document.getElementById("unvisable")?.click()
   }
 
   createTeacher() {
@@ -55,7 +62,7 @@ export class CreateTeacherComponent {
     this.homeNumber = (document.getElementById("homeNumber") as HTMLInputElement).value
     this.phoneNumber = (document.getElementById("phoneNumber") as HTMLInputElement).value
 
-    this.authService.createTeacher(this.firstName,this.lastName,this.email,this.gender,this.day,this.month,this.year,this.country,this.region,this.district,this.homeNumber,this.phoneNumber,this.parentsPhoneNumber).subscribe({
+    this.authService.createTeacher(this.firstName,this.lastName,this.email,this.gender,this.day,this.month,this.year,this.country,this.region,this.district,this.homeNumber,this.phoneNumber,this.parentsPhoneNumber,this.photo,this.pdf).subscribe({
         next: (data) => {
           if(data.isSuccess==true)
           {
