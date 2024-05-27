@@ -13,11 +13,11 @@ export class AddMarkService {
   baseURL=environment.baseUrl
 
 
-  getAllAddMark():Observable<AddMark>{
-    return this.http.get<AddMark>(this.baseURL+"/Student/GetAllSudents")
-  }
+  // getAllAddMark():Observable<AddMark>{
+  //   return this.http.get<AddMark>(this.baseURL+"/Student/GetAllSudents")
+  // }
 
-  getAddMarkById(id:number):Observable<any>{
-    return this.http.get<any>(this.baseURL+"/Attendance/GetAllAttendance?id="+id)
-  }
+  // getAddMarkById(id:number):Observable<any>{
+  //   return this.http.get<any>(this.baseURL+"/Attendance/GetAllAttendance?id="+id)
+  // }
 }
