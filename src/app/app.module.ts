@@ -44,6 +44,7 @@ import { FormsModule } from '@angular/forms';
 import { CreateTeacherComponent } from './components/auth/create-teacher/create-teacher.component';
 import { CreateClassComponent } from './components/admin/create-class/create-class.component';
 import { SelectComponent } from './components/UI/select/select.component';
+import { TeacherQuestionsComponent } from './components/teacher/teacher-questions/teacher-questions.component';
 
 
 @NgModule({
@@ -90,6 +91,7 @@ import { SelectComponent } from './components/UI/select/select.component';
     CreateTeacherComponent,
     CreateClassComponent,
     SelectComponent,
+    TeacherQuestionsComponent,
   ],
   imports: [
     BrowserModule,

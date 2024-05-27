@@ -13,11 +13,12 @@ import { ClassService } from '../../../services/class.service';
   styleUrl: './add-mark.component.scss',
 })
 export class AddMarkComponent {
-  addmark!: AddMark;
+  addmark!: any;
   add_coin!: Addcoin;
   classList: any;
   lessonList: any;
   classId!: number;
+  studentTest!: any
 
   constructor(
     private addmarkService: AddMarkService,
@@ -99,6 +100,7 @@ export class AddMarkComponent {
     console.log(event.target.value);
     this.classId = event.target.value;
     // debugger;
+    this.getStudentsByClassId();
     this.lessonService.GetByIdLesson(event.target.value).subscribe((res) => {
       this.lessonList = res;
       console.log(this.lessonList);
@@ -113,7 +115,15 @@ export class AddMarkComponent {
     
   }
 
+  getStudentsByClassId() {
+    this.studentService
+      .StudentGetById(this.classId)
+      .subscribe((res) => {
+        this.studentTest = res
+      });
+  }
+
   onChangeLesson(event: any) {
-    console.log(event.target.value);
+    // console.log(event.target.value);
   }
 }
