@@ -35,21 +35,32 @@ export class FormComponent {
   photo!: File
   pdf!: File
   classList!: any
-  classId!: number
+  classId!: string
   genderText!: string
   birthDate!: HTMLInputElement
 
 
-  onChange(event: any) {
+
+  getClass(event: any) {
     this.classId = event.target.value
+    console.log(this.classId)
   }
 
   catchFile(cachedPhoto: File) {
-    console.log("fayl nomi:")
-    console.log(cachedPhoto.name)
+    this.photo=cachedPhoto
+  }
+
+  getPDF(pdf:any){
+    this.pdf=pdf.target.files[0]
+  }
+
+  trigger(){
+    document.getElementById("unvisable")?.click()
   }
 
   createStudent() {
+
+
     this.firstName = (document.getElementById("firstName") as HTMLInputElement).value
     this.lastName = (document.getElementById("lastName") as HTMLInputElement).value
     this.email = (document.getElementById("email") as HTMLInputElement).value
