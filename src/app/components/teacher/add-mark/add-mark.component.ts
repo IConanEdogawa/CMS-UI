@@ -3,78 +3,117 @@ import { AddcoinService } from '../../../services/addcoin.service';
 import { Addcoin } from '../../../models/addcoin';
 import { AddMark } from '../../../models/addmark';
 import { Component } from '@angular/core';
+import { LessonService } from '../../../services/lesson.service';
+import { StudentService } from '../../../services/student.service';
+import { ClassService } from '../../../services/class.service';
 
 @Component({
   selector: 'app-add-mark',
   templateUrl: './add-mark.component.html',
-  styleUrl: './add-mark.component.scss'
+  styleUrl: './add-mark.component.scss',
 })
 export class AddMarkComponent {
-addmark!:AddMark
-add_coin! : Addcoin
+  addmark!: AddMark;
+  add_coin!: Addcoin;
+  classList: any;
+  lessonList: any;
+  classId!: number;
 
-  
-  constructor(private addmarkService:AddMarkService,private addcoinService:AddcoinService){
-    this.getall()
+  constructor(
+    private addmarkService: AddMarkService,
+    private addcoinService: AddcoinService,
+    private lessonService: LessonService,
+    private studentService: StudentService,
+    private classService: ClassService
+  ) {
+    this.getall();
     
-    console.log(this.numbers)
+    this.classService.GetAllClasses().subscribe
+    ((res) => {
+      console.log(res);
+      this.classList = res;
+    });
+    console.log(this.numbers);
   }
 
-  studentId = Array()
+  
 
-  getall(){
+  studentId = Array();
+
+  getall() {
     this.addmarkService.getAllAddMark().subscribe({
-      next:(data)=>{
-        this.addmark=data
-        console.log(data)
+      next: (data) => {
+        this.addmark = data;
+        console.log(data);
         if (this.addmark != null) {
-          if (this.addmark.$values != null) { 
+          if (this.addmark.$values != null) {
             for (let index = 0; index < this.addmark.$values.length; index++) {
-              this.numbers.push(index)     
+              this.numbers.push(index);
               // console.log(this.addmark.$values[index].id)
-              this.studentId.push(this.addmark.$values[index].id)
+              this.studentId.push(this.addmark.$values[index].id);
             }
           }
         }
       },
-      error:(err)=>{
-        console.log(err)
-      }
-    })
+      error: (err) => {
+        console.log(err);
+      },
+    });
   }
 
-  numbers : number[] = []
-  addcoin(e: any){
-    const body = Array()
-    const nodeList =  e.target.parentNode.childNodes;
+  numbers: number[] = [];
+  addcoin(e: any) {
+    const body = Array();
+    const nodeList = e.target.parentNode.childNodes;
     for (let index = 0; index < nodeList.length; index++) {
-      var obj ={
-        id:String,
-        coin:Number
-      }
+      var obj = {
+        id: String,
+        coin: Number,
+      };
       const element = nodeList[index];
       // console.dir(element.childNodes)
-      if (element.childNodes.length == 2){
-        var value = element.childNodes[1].childNodes[0].childNodes[0]
-        obj.id = this.studentId[index]
-        obj.coin = value.value
-        value.value = ""
-        body.push(obj)
+      if (element.childNodes.length == 2) {
+        var value = element.childNodes[1].childNodes[0].childNodes[0];
+        obj.id = this.studentId[index];
+        obj.coin = value.value;
+        value.value = '';
+        body.push(obj);
       }
     }
-    console.log(body)
-    
-    for(let i=0;i<body.length;i++){
-      if(body[i].coin == "")
-        continue
+    console.log(body);
+
+    for (let i = 0; i < body.length; i++) {
+      if (body[i].coin == '') continue;
       this.addcoinService.AddCoins(body[i]).subscribe({
-        next:(data)=>{
-          console.log(data)
+        next: (data) => {
+          console.log(data);
         },
-        error:(err)=>{
-          console.log(err)
-        }
-      })
+        error: (err) => {
+          console.log(err);
+        },
+      });
     }
+  }
+
+  onChangeClass(event: any) {
+    console.log(event.target.value);
+    this.classId = event.target.value;
+    // debugger;
+    this.lessonService.GetByIdLesson(event.target.value).subscribe((res) => {
+      this.lessonList = res;
+      console.log(this.lessonList);
+    });
+
+    this.addmarkService
+      .getAddMarkById(this.classId)
+      .subscribe((res) => {
+        this.addmark = res;
+        console.log(this.addmark);
+      });
+    
+  }
+
+  onChangeLesson(event: any) {
+    console.log(event.target.value);
   }
 }
