@@ -39,19 +39,25 @@
         </div>
         
         <div class="attendance-table__body">
-          @for (index of numbers; track index){
-          <div class="attendance-table__body-row">
-            <div class="attendance-table-body__item">
-              <p>{{addmark.$values[index].firstName + " " + addmark.$values[index].lastName}}</p>
-            </div>
-
-            <div class="flex">
-              <div class="attendance-table-body__item">
-                <input type="text" [maxLength]=3 name="" id=`mark_${index}` />
-              </div>
-            </div>
-          </div>
-        }
+          @if (isEnter){
+            @for (index of studentTest.$values; track index){
+              @if (index.firstName != undefined){
+                <div class="attendance-table__body-row">
+                  <div class="attendance-table-body__item">
+                    <p>
+                      {{index.firstName + " " + index.lastName}}
+                    </p>
+                  </div>
+      
+                  <div class="flex">
+                    <div class="attendance-table-body__item">
+                      <input type="text" [maxLength]=3 name="" id=`mark_${index}` />
+                    </div>
+                  </div>
+                </div>
+              }
+            }
+          }
         <button (click)="addcoin($event)" class="submit-btn">Submit</button>
       </div>
 

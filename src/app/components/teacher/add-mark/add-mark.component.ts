@@ -13,11 +13,13 @@ import { ClassService } from '../../../services/class.service';
   styleUrl: './add-mark.component.scss',
 })
 export class AddMarkComponent {
-  addmark!: AddMark;
+  addmark!: any;
   add_coin!: Addcoin;
   classList: any;
   lessonList: any;
   classId!: number;
+  studentTest!: any
+  isEnter!: any;
 
   constructor(
     private addmarkService: AddMarkService,
@@ -26,7 +28,7 @@ export class AddMarkComponent {
     private studentService: StudentService,
     private classService: ClassService
   ) {
-    this.getall();
+    // this.getall();
     
     this.classService.GetAllClasses().subscribe
     ((res) => {
@@ -36,30 +38,30 @@ export class AddMarkComponent {
     console.log(this.numbers);
   }
 
-  
+  appropricateBody = Array();
 
   studentId = Array();
 
-  getall() {
-    this.addmarkService.getAllAddMark().subscribe({
-      next: (data) => {
-        this.addmark = data;
-        console.log(data);
-        if (this.addmark != null) {
-          if (this.addmark.$values != null) {
-            for (let index = 0; index < this.addmark.$values.length; index++) {
-              this.numbers.push(index);
-              // console.log(this.addmark.$values[index].id)
-              this.studentId.push(this.addmark.$values[index].id);
-            }
-          }
-        }
-      },
-      error: (err) => {
-        console.log(err);
-      },
-    });
-  }
+  // getall() {
+  //   this.addmarkService.getAllAddMark().subscribe({
+  //     next: (data) => {
+  //       this.addmark = data;
+  //       console.log(data);
+  //       if (this.addmark != null) {
+  //         if (this.addmark.$values != null) {
+  //           for (let index = 0; index < this.addmark.$values.length; index++) {
+  //             this.numbers.push(index);
+  //             // console.log(this.addmark.$values[index].id)
+  //             this.studentId.push(this.addmark.$values[index].id);
+  //           }
+  //         }
+  //       }
+  //     },
+  //     error: (err) => {
+  //       console.log(err);
+  //     },
+  //   });
+  // }
 
   numbers: number[] = [];
   addcoin(e: any) {
@@ -99,21 +101,33 @@ export class AddMarkComponent {
     console.log(event.target.value);
     this.classId = event.target.value;
     // debugger;
+    this.getStudentsByClassId();
     this.lessonService.GetByIdLesson(event.target.value).subscribe((res) => {
       this.lessonList = res;
       console.log(this.lessonList);
     });
 
-    this.addmarkService
-      .getAddMarkById(this.classId)
-      .subscribe((res) => {
-        this.addmark = res;
-        console.log(this.addmark);
-      });
+    // this.addmarkService
+    //   .getAddMarkById(this.classId)
+    //   .subscribe((res) => {
+    //     this.addmark = res;
+    //     console.log(this.addmark);
+    //   });
     
   }
 
+  getStudentsByClassId() {
+    this.studentService
+      .StudentGetById(this.classId)
+      .subscribe((res) => {
+        console.log(res);
+        // console.log(res.$values[0].firstName)
+        this.studentTest = res.students
+        this.isEnter = true;
+      });
+  }
+
   onChangeLesson(event: any) {
-    console.log(event.target.value);
+    // console.log(event.target.value);
   }
 }

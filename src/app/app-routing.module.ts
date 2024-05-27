@@ -29,20 +29,17 @@ import { ConfirmCodeComponent } from './components/auth/confirm-code/confirm-cod
 import { NewPasswordComponent } from './components/auth/new-password/new-password.component';
 import { CreateTeacherComponent } from './components/auth/create-teacher/create-teacher.component';
 import { CreateClassComponent } from './components/admin/create-class/create-class.component';
+import { TeacherQuestionsComponent } from './components/teacher/teacher-questions/teacher-questions.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'login-menu', component: LoginMenuComponent },
-  { path: 'teacher-login', component: TeacherLoginComponent },
-  { path: 'student-login', component: StudentLoginComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'confirmation', component: ConfirmCodeComponent },
   { path: 'new-password', component: NewPasswordComponent },
-  { path:'create-user',component:CreateTeacherComponent},
-
-  { path: 'form', component: FormComponent, canActivate: [authGuard] },
+  
+  { path: 'student-login', component: StudentLoginComponent },
   { path: 'user-home', component: UserHome },
-  { path: 'notice-events', component: EventsComponent },
   { path: 'solutions', component: SolutionsComponent },
   { path: 'student-profile', component: StudentProfileComponent },
   { path: 'quiz-start', component: QuizStartComponent },
@@ -54,12 +51,18 @@ const routes: Routes = [
   { path: 'student-question-list', component: QuestionListComponent },
   { path: 'student-ask-question', component: AskQuestionComponent },
   { path: 'student-answer', component: AnswerComponent },
+  { path: 'student-ask-question', component: AskQuestionComponent },
+  
+  { path: 'teacher-login', component: TeacherLoginComponent },
+  { path: 'form', component: FormComponent },
+  { path:'create-teacher',component:CreateTeacherComponent},
+  { path: 'notice-events', component: EventsComponent },
   { path: 'teacher-result', component: TeacherResultComponent },
   { path: 'teacher-homework', component: TeacherHomeworkComponent },
   { path: 'teacher-attendance', component: AttendanceComponent },
   { path: 'teacher-add-mark', component: AddMarkComponent },
-  { path: 'student-ask-question', component: AskQuestionComponent },
   {path:"create-class",component:CreateClassComponent},
+  {path: "teacher-questions",component:TeacherQuestionsComponent},
   {path:"",component:LoginMenuComponent},
   { path: '**', component: NotFoundComponent },
 ];
