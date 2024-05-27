@@ -51,7 +51,7 @@
         </div>
         <div data-aos="fade-right" data-aos-duration="1000"  class="form-group">
             <div class="mb-3">
-                <select
+                <select (change)="getClass($event)"
                     class="form-select form-select-lg"
                     name=""
                     id=""
@@ -65,6 +65,11 @@
                 </select>
             </div>
             
+        </div>
+        
+        <div data-aos="fade-up" data-aos-duration="1000" class="add-button-handler">
+            <div (click)="trigger()" class="input-trigger">upload documents</div>
+            <input (change)="getPDF($event)" id="unvisable" class="unvisible-input" type="text" type="file">
         </div>
         <div data-aos="fade-up" data-aos-duration="1000" class="add-button-handler">
             <div (click)="createStudent()" class="add-button">Create</div>

@@ -14,8 +14,16 @@ export class SecondaryNavbarComponent {
     this.photo.emit(this.photoFile)
   }
 
-  catchPhoto(photo:any|File){
-    this.photoFile=photo
+  catchPhoto(event:any){
+    this.photoFile=event.target.files[0]
+    console.log(this.photoFile)
+    this.photo.emit(this.photoFile)
+
+    let reader = new FileReader()
+    reader.readAsDataURL(event.target.files[0])
+    reader.onload=(e:any)=>{
+      this.path=e.target?.result
+    }
   }
 
   upload(){

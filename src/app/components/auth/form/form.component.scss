@@ -83,3 +83,25 @@
 .unvisable{
     display: none;
 }
+
+.unvisible-input{
+    display: none;
+}
+
+.input-trigger{
+    width: 50%;
+    height: 40px;
+    background-color: red;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.input-trigger:hover{
+    cursor: pointer;
+    background-color: rgb(255, 120, 120);
+}
