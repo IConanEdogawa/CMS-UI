@@ -22,6 +22,7 @@ export class AddMarkComponent {
   lessonId!: number;
   studentTest!: any;
   isEnter!: any;
+  isSuccess!: any;
 
   constructor(
     private addmarkService: AddMarkService,
@@ -69,6 +70,7 @@ export class AddMarkComponent {
           next: (data) => {
             // console.log(data);
             body.push(data);
+            this.isSuccess = true;
           },
           error: (err) => {
             console.log(err);
@@ -76,10 +78,9 @@ export class AddMarkComponent {
         });
         console.log(obj);
       }
-      if (body.length > 0) {
-        console.log(body);
-        alert('Mark added successfully');
-      }
+    }
+    if (this.isSuccess) {
+      alert('Mark added successfully');
     }
   }
 
