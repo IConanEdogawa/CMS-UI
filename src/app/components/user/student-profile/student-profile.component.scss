@@ -5,6 +5,8 @@
     bottom: 50px;
     display: flex;
     justify-content: center;
+    margin: 0;
+    transition: 0.5s;
 }
 
 .inner-main{
@@ -12,7 +14,7 @@
 }
 
 .id{
-    font-size: 24px;
+    font-size: 15px;
     font-weight: 400;
     font-family: sans-serif;
     color: blue;
@@ -59,4 +61,14 @@
 .reaquest-button:hover{
     cursor: pointer;
     background-color: rgb(127, 127, 253);
+}
+
+.after-wars{
+    width: 100%;
+    height: 20px;
+}
+
+.id-handler{
+    margin-top: 5%;
+    display: flex;
 }

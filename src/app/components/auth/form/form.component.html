@@ -49,10 +49,10 @@
             <label class="label">Parent's phone number</label>
             <input id="parentsPhoneNumber" placeholder="Enter something..." class="input" type="text" required>
         </div>
-        <div data-aos="fade-right" data-aos-duration="1000"  class="form-group">
+        <div data-aos="fade-left" data-aos-duration="1000"  class="form-group">
             <div class="mb-3">
-                <select (change)="getClass($event)"
-                    class="form-select form-select-lg"
+                <label class="label">Choose Class</label>
+                <select class="choose" (change)="getClass($event)"
                     name=""
                     id=""
                 >
