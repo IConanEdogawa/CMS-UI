@@ -37,18 +37,19 @@ export class LoginComponent {
     } else {
       this.authService.login(email, password).subscribe({
         next: (res) => {
-          console.log(res);
+          window.alert(res.mjessage)
           const token: any = jwtDecode(res);
           console.log(token);
           if (token.Role == 'Student') this.router.navigate(['/student-login']);
           else if (token.Role == 'Teacher')
             this.router.navigate(['/teacher-login']);
+          console.log("xatooooo")
           return res;
         },
         error: (err) => {
-          console.log(err.error.text);
+          window.alert(err.error.message)
           const token: any = jwtDecode(err.error.text);
-          console.log(token);
+          console.log(err);
           if (token.Role == 'Student') this.router.navigate(['/student-login']);
           else if (token.Role == 'Teacher')
             this.router.navigate(['/teacher-login']);
