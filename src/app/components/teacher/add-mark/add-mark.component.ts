@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
 import { LessonService } from '../../../services/lesson.service';
 import { StudentService } from '../../../services/student.service';
 import { ClassService } from '../../../services/class.service';
+import { Target } from '@angular/compiler';
 
 @Component({
   selector: 'app-add-mark',
@@ -18,7 +19,8 @@ export class AddMarkComponent {
   classList: any;
   lessonList: any;
   classId!: number;
-  studentTest!: any
+  lessonId!: number;
+  studentTest!: any;
   isEnter!: any;
 
   constructor(
@@ -28,11 +30,8 @@ export class AddMarkComponent {
     private studentService: StudentService,
     private classService: ClassService
   ) {
-    // this.getall();
-    
-    this.classService.GetAllClasses().subscribe
-    ((res) => {
-      console.log(res);
+    this.classService.GetAllClasses().subscribe((res) => {
+      // console.log(res);
       this.classList = res;
     });
     console.log(this.numbers);
@@ -42,92 +41,68 @@ export class AddMarkComponent {
 
   studentId = Array();
 
-  // getall() {
-  //   this.addmarkService.getAllAddMark().subscribe({
-  //     next: (data) => {
-  //       this.addmark = data;
-  //       console.log(data);
-  //       if (this.addmark != null) {
-  //         if (this.addmark.$values != null) {
-  //           for (let index = 0; index < this.addmark.$values.length; index++) {
-  //             this.numbers.push(index);
-  //             // console.log(this.addmark.$values[index].id)
-  //             this.studentId.push(this.addmark.$values[index].id);
-  //           }
-  //         }
-  //       }
-  //     },
-  //     error: (err) => {
-  //       console.log(err);
-  //     },
-  //   });
-  // }
+  onChangeLesson(event: any) {
+    console.log(event.target.value);
+    this.lessonId = event.target.value;
+  }
 
-  numbers: number[] = [];
-  addcoin(e: any) {
+  send(e: any) {
     const body = Array();
     const nodeList = e.target.parentNode.childNodes;
+    console.log(nodeList);
     for (let index = 0; index < nodeList.length; index++) {
       var obj = {
-        id: String,
-        coin: Number,
+        studentId: '',
+        lessonId: this.classId,
+        lessonCoin: 0,
+        homeworkCoin: 0,
       };
       const element = nodeList[index];
       // console.dir(element.childNodes)
       if (element.childNodes.length == 2) {
         var value = element.childNodes[1].childNodes[0].childNodes[0];
-        obj.id = this.studentId[index];
-        obj.coin = value.value;
+        obj.studentId = nodeList[index].id;
+        console.log(value.value);
+        obj.homeworkCoin = Number(value.value);
         value.value = '';
-        body.push(obj);
+        this.addmarkService.addMark(obj).subscribe({
+          next: (data) => {
+            // console.log(data);
+            body.push(data);
+          },
+          error: (err) => {
+            console.log(err);
+          },
+        });
+        console.log(obj);
       }
-    }
-    console.log(body);
-
-    for (let i = 0; i < body.length; i++) {
-      if (body[i].coin == '') continue;
-      this.addcoinService.AddCoins(body[i]).subscribe({
-        next: (data) => {
-          console.log(data);
-        },
-        error: (err) => {
-          console.log(err);
-        },
-      });
+      if (body.length > 0) {
+        console.log(body);
+        alert('Mark added successfully');
+      }
     }
   }
 
+  numbers: number[] = [];
+
   onChangeClass(event: any) {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     this.classId = event.target.value;
     // debugger;
     this.getStudentsByClassId();
     this.lessonService.GetByIdLesson(event.target.value).subscribe((res) => {
       this.lessonList = res;
-      console.log(this.lessonList);
+      // console.log(this.lessonList);
     });
-
-    // this.addmarkService
-    //   .getAddMarkById(this.classId)
-    //   .subscribe((res) => {
-    //     this.addmark = res;
-    //     console.log(this.addmark);
-    //   });
-    
   }
 
   getStudentsByClassId() {
-    this.studentService
-      .StudentGetById(this.classId)
-      .subscribe((res) => {
-        console.log(res);
-        // console.log(res.$values[0].firstName)
-        this.studentTest = res.students
-        this.isEnter = true;
-      });
-  }
-
-  onChangeLesson(event: any) {
-    // console.log(event.target.value);
+    this.studentService.StudentGetById(this.classId).subscribe((res) => {
+      // console.log(res);
+      // console.log(res.$values[0].firstName)
+      this.studentTest = res.students;
+      console.log(res.students);
+      this.isEnter = true;
+    });
   }
 }

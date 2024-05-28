@@ -42,7 +42,7 @@
           @if (isEnter){
             @for (index of studentTest.$values; track index){
               @if (index.firstName != undefined){
-                <div class="attendance-table__body-row">
+                <div class="attendance-table__body-row" id="{{ index.id }}">
                   <div class="attendance-table-body__item">
                     <p>
                       {{index.firstName + " " + index.lastName}}
@@ -58,7 +58,7 @@
               }
             }
           }
-        <button (click)="addcoin($event)" class="submit-btn">Submit</button>
+        <button (click)="send($event)" class="submit-btn">Submit</button>
       </div>
 
 
