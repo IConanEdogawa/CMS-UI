@@ -1,40 +1,46 @@
-<app-secondary-navbar path="../../../../assets/images/student-profile2.png"  />
+<app-secondary-navbar path={{path}}  />
 <div class="main">
-    <div class="inner-main">
-        <h2 data-aos="zoom-in" data-aos-duration="1000" class="id">ID: 165653</h2>
-        <div data-aos="zoom-in" data-aos-duration="1000" class="other-info">
+    <div id="inner-main" class="inner-main">
+        <div id="allData" data-aos="zoom-in" data-aos-duration="1000" class="other-info">
+            <div class="id-handler">
+                <h2 data-aos="zoom-in" data-aos-duration="1000" class="id">ID: </h2>
+                <h2 data-aos="zoom-in" data-aos-duration="1000" class="id">{{student.id}}</h2>
+            </div>
+
             <div class="info-handler">
-                <p class="key">Full Name:</p>
-                <p class="value">Tohirjon Odilov</p>
+                <p class="key">First Name:</p>
+                <p id="firstName" class="value">{{student.firstName}}</p>
                 <hr>
             </div>
             <div class="info-handler">
-                <p class="key">Grade:</p>
-                <p class="value">11 A</p>
+                <p class="key">Last Name:</p>
+                <p class="value">{{student.lastName}}</p>
                 <hr>
             </div>
             <div class="info-handler">
-                <p class="key">Roll No.:</p>
-                <p class="value">10</p>
+                <p class="key">Grade Number:</p>
+                <p class="value">{{student.class.grade}}</p>
                 <hr>
             </div>
             <div class="info-handler">
-                <p class="key">Address:</p>
-                <p class="value">Paris</p>
+                <p class="key">Grade Name:</p>
+                <p class="value">{{student.class.name}}</p>
                 <hr>
             </div>
             <div class="info-handler">
-                <p class="key">Parents name:</p>
-                <p class="value">~~~</p>
+                <p class="key">Country:</p>
+                <p class="value">{{student.location.country}}</p>
                 <hr>
             </div>
             <div class="info-handler">
                 <p class="key">Parents contact:</p>
-                <p class="value">+998-XX-XXX-XXXX</p>
+                <p class="value">{{student.parentsPhoneNumber}}</p>
                 <hr>
             </div>
         </div>
 
-        <div data-aos="fade-up" data-aos-duration="1000" class="reaquest-button">Request to edit</div>
+        <div id="edit" (click)="change()" data-aos="fade-up" data-aos-duration="1000" class="reaquest-button">Request to edit</div>
+
+        <div style="height: 100px;"></div>
     </div>
 </div>
