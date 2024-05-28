@@ -66,11 +66,11 @@ export class EventsComponent {
     console.log(this.data);
     this.eventService.eventCreate(this.data).subscribe({
       next:(data)=>{
-        console.log(data);
+        window.alert(data.message)
         
       },
       error:(err)=>{
-        console.log(err);
+        console.log(err); 
         
       }
     })
