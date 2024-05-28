@@ -37,7 +37,7 @@ import { PrimaryNavbarComponent } from './components/UI/primary-navbar/primary-n
 import { QuizStartComponent } from './components/user/quiz-start/quiz-start.component';
 import { ResultComponent as StudentResultComponent } from './components/user/result/result.component';
 import { ResultComponent as TeacherResultComponent } from './components/teacher/result/result.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { NotFoundComponent } from './components/UI/not-found/not-found.component';
 import { FormsModule } from '@angular/forms';
