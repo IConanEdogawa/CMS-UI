@@ -6,76 +6,69 @@ import { ResponceModel } from '../../../models/responce-model';
 @Component({
   selector: 'app-events',
   templateUrl: './events.component.html',
-  styleUrl: './events.component.scss'
+  styleUrl: './events.component.scss',
 })
 export class EventsComponent {
-  upload(){
-    document.getElementById("real-input")?.click()
+  upload() {
+    document.getElementById('real-input')?.click();
   }
- 
-  constructor( private eventService:EventService) {
-    
-    this.eventCreated()
-    
-  }
-  
-  responceModde!:ResponceModel
 
-  selectedFile: File | null = null
-  
+  constructor(private eventService: EventService) {
+    this.eventCreated();
+  }
+
+  responceModde!: ResponceModel;
+
+  selectedFile: File | null = null;
+
   data = {
-    title: "",
-    description: "",
+    title: '',
+    description: '',
     photo: this.selectedFile,
     date: {
       day: 0,
       month: 0,
-      year: 0
-    }
-  } 
-  datas = {}
+      year: 0,
+    },
+  };
+  datas = {};
 
   onFileSelected(event: any) {
     this.data.photo = event.target.files[0] as File;
   }
-  
-  eventCreated(){
-    const titleElement = document.getElementById("Title") as HTMLInputElement;
-    if (titleElement) {
-      console.log(this.datas)
-      console.log(titleElement.value)
 
+  eventCreated() {
+    const titleElement = document.getElementById('Title') as HTMLInputElement;
+    if (titleElement) {
+      console.log(this.datas);
+      console.log(titleElement.value);
       this.data.title = titleElement.value;
     }
 
-    const description = document.getElementById("description") as HTMLInputElement;
+    const description = document.getElementById(
+      'description'
+    ) as HTMLInputElement;
+
     if (description) {
       this.data.description = description.value;
-    } 
+    }
 
-    const date = document.getElementById("date") as HTMLInputElement
-    if(date){
-      const realDate = new Date(date.value)
-
-      this.data.date.day=realDate.getDay()
-      this.data.date.month=realDate.getMonth()
-      this.data.date.year=realDate.getFullYear()
-
+    const date = document.getElementById('date') as HTMLInputElement;
+    if (date) {
+      const realDate = new Date(date.value);
+      this.data.date.day = realDate.getDay();
+      this.data.date.month = realDate.getMonth();
+      this.data.date.year = realDate.getFullYear();
     }
 
     console.log(this.data);
     this.eventService.eventCreate(this.data).subscribe({
-      next:(data)=>{
-        window.alert(data.message)
-        
+      next: (data) => {
+        window.alert(data.message);
       },
-      error:(err)=>{
-        console.log(err); 
-        
-      }
-    })
+      error: (err) => {
+        console.log(err);
+      },
+    });
   }
-
-
-
 }

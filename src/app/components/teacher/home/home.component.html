@@ -32,8 +32,13 @@
           <button (click)="submit()">Submit</button>
         </div>
         <div class="file-wrapper">
-          <input type="file" />
-          <p>Upload File</p>
+          <input id="real-input" class="real-uploader" type="file" (change)="onFileSelected($event)" accept="image/*" />
+          <p
+            class="upload-image"
+            (click)="upload()"
+          >
+            Upload image
+          </p>
         </div>
       </div>
     </div>
