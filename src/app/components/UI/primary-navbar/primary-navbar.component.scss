@@ -5,6 +5,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    margin: 0;
+    z-index: 2;
 }
 
 .image{

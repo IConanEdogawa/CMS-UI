@@ -12,12 +12,12 @@
             </div>
         </div>
         <div class="cards-mine">
-            <app-small-card path="../../../../assets/images/attendance.png" header="Attendance"/>
-            <app-small-card path="../../../../assets/images/homework.png" header="Homework"/>
-            <app-small-card path="../../../../assets/images/result.png" header="Result"/>
-            <app-small-card path="../../../../assets/images/exam.png" header="Exam Routine"/>
-            <app-small-card path="../../../../assets/images/solution.png" header="Solution"/>
-            <app-small-card path="../../../../assets/images/event.png" header="Notice & Event"/>
+            <app-small-card path="../../../../assets/images/attendance.png" header="Attendance" [routerLink]="['/teacher-student-attendance']"/>
+            <app-small-card path="../../../../assets/images/homework.png" header="Homework" [routerLink]="['/teacher-homework']"/>
+            <app-small-card path="../../../../assets/images/result.png" header="Result" [routerLink]="['/techer-result']"/>
+            <app-small-card path="../../../../assets/images/exam.png" header="Quiz" [routerLink]="['/quiz-start']"/>
+            <app-small-card path="../../../../assets/images/solution.png" header="Student Profile" [routerLink]="['/student-profile']"/>
+            <app-small-card path="../../../../assets/images/event.png" header="Notice & Event" [routerLink]="['/events']"/>
         </div>
     </div>
 </div>

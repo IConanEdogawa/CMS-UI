@@ -37,7 +37,7 @@ export class LoginComponent {
     } else {
       this.authService.login(email, password).subscribe({
         next: (res) => {
-          window.alert(res.mjessage)
+          window.alert("Success")
           const token: any = jwtDecode(res);
           console.log(token);
           if (token.Role == 'Student') this.router.navigate(['/student-login']);
@@ -47,7 +47,7 @@ export class LoginComponent {
           return res;
         },
         error: (err) => {
-          window.alert(err.error.message)
+          window.alert("Success")
           const token: any = jwtDecode(err.error.text);
           console.log(err);
           if (token.Role == 'Student') this.router.navigate(['/student-login']);
