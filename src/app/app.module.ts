@@ -45,6 +45,14 @@ import { CreateTeacherComponent } from './components/auth/create-teacher/create-
 import { CreateClassComponent } from './components/admin/create-class/create-class.component';
 import { SelectComponent } from './components/UI/select/select.component';
 import { TeacherQuestionsComponent } from './components/teacher/teacher-questions/teacher-questions.component';
+import { NZ_I18N } from 'ng-zorro-antd/i18n';
+import { en_US } from 'ng-zorro-antd/i18n';
+import { registerLocaleData } from '@angular/common';
+import en from '@angular/common/locales/en';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';import { NzButtonModule } from 'ng-zorro-antd/button';
+
+registerLocaleData(en);
+
 
 
 @NgModule({
@@ -98,9 +106,13 @@ import { TeacherQuestionsComponent } from './components/teacher/teacher-question
     AppRoutingModule,
     HttpClientModule,
     RouterModule,
-    FormsModule
+    FormsModule,
   ],
-  providers: [],
+  providers: [
+    { provide: NZ_I18N, useValue: en_US },
+    provideAnimationsAsync(),
+    provideHttpClient()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

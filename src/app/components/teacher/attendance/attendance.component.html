@@ -25,7 +25,8 @@
         <div class="attendance-choose">
           <select name="" id="" (change)="onChangeClass($event)">
             <option value="" hidden selected>Choose your class</option>
-            @if (classList) {@for (class of classList.$values; track classList.$values.name){
+            @if (classList) {@for (class of classList.$values; track
+            classList.$values.name){
             <option value="{{ class.id }}">
               {{ class.grade }}-{{ class.name }}
             </option>
@@ -39,38 +40,38 @@
             } }
           </select>
         </div>
-        <div class="attendance-table__body">
-          @if (studentList){ 
-            @if (studentList.$values > 0){ @for (student of studentList.$values; track
-              studentList.$values.theme){
-              <div class="attendance-table__body-row">
-                <div class="attendance-table-body__item">
-                  <p>John Doe</p>
-                </div>
-    
-                <div class="flex">
-                  <div class="attendance-table-body__item">
-                    <!-- <span></span> -->
-                    <input type="checkbox" name="" id="" />
-                  </div>
-                  <div class="attendance-table-body__item">
-                    <input type="checkbox" name="" id="" />
-                    <!-- <span></span> -->
-                  </div>
-                </div>
+        <div class="attendance-table__body" id="studentList">
+          @if (studentList){ @if (studentList.length > 0){ @for (student of
+          studentList; track studentList.id){
+          <div class="attendance-table__body-row">
+            <div class="attendance-table-body__item">
+              <p>{{ student.firstName }} {{ student.lastName }}</p>
+            </div>
+
+            <div class="flex">
+              <div class="attendance-table-body__item">
+                <!-- <span></span> -->
+                <input type="checkbox" name="" id="" class="isPresent"/>
               </div>
-              }
-            } @else {
-              <div class="alert alert-info" role="alert">
-                <strong>Heads up!</strong> No students found.
+              <div class="attendance-table-body__item">
+                <input type="checkbox" name="" id="" />
+                <!-- <span></span> -->
+              </div>
             </div>
-            }
-          } @else{
-            <div class="alert alert-warning" role="alert">
-              <strong>Warning!</strong> Choose your class and lesson first.
-            </div>
+          </div>
+          } } @else {
+          <div class="alert alert-info" role="alert">
+            <strong>Heads up!</strong> No students found.
+          </div>
+          } } @else{
+          <div class="alert alert-warning" role="alert">
+            <strong>Warning!</strong> Choose your class and lesson first.
+          </div>
           }
         </div>
+      </div>
+      <div class="send__wrapper">
+        <button class="send" (click)="send()">Submit</button>
       </div>
     </div>
   </section>

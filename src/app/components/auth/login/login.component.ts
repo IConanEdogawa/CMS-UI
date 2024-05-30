@@ -22,7 +22,7 @@ export class LoginComponent {
 
     if (isDirector.email == email && isDirector.password == password) {
       
-      const accessToken: any = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI5NmNjYWQzOS0xMmI0LTQwZGYtYjk4OC01ZGQ3M2EyYzA5ODciLCJpYXQiOjE3MTYwOTc3OTEsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImRpcmVjdG9yQGdtYWlsLmNvbSIsIkZ1bGxOYW1lIjoiU2FyZG9yIER1c2hhbW92IiwiUm9sZSI6IlRlYWNoZXIiLCJpZCI6ImVlMmY0ODVlLWQxN2UtNDFlMy04ZWE3LTdhNmEzZmVjZWQ4OSIsImV4cCI6MTcxNjEzMzc5MX0.OqpJq3K8uKHd6Q1Lpu3FmcldzUeTqHIVjsC7H7ozm9M";
+      const accessToken: any = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI5NmNjYWQzOS0xMmI0LTQwZGYtYjk4OC01ZGQ3M2EyYzA5ODciLCJpYXQiOjE3MTYwOTc3OTEsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6Im1hcXN1ZEBnbWFpbC5jb20iLCJGdWxsTmFtZSI6Ik1hcXN1ZCBUb3JheWV2IiwiUm9sZSI6IlRlYWNoZXIiLCJpZCI6ImVlMmY0ODVlLWQxN2UtNDFlMy04ZWE3LTdhNmEzZmVjZWQ4OSIsImV4cCI6MTcxNjEzMzc5MX0.UpkndwyC0dMyNSVH5wCIPWnkDYTMduCEjV9gHks6UzI";
       
       localStorage.setItem(
         'accessToken',

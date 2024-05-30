@@ -12,6 +12,6 @@ export class AppComponent {
 
   ngOnInit(): void {
     AOS.init();
-    sessionStorage.setItem("isDirector", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpcmVjdG9yQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoibWVuU2hlZm1hbiJ9.NcIN8ZTXGz5Yy-X4tWbe2VgHE7YEf-cwF1pWtwSUfAM")
+    sessionStorage.setItem("isDirector", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hcXN1ZEBnbWFpbC5jb20iLCJwYXNzd29yZCI6Ik1hcXN1ZGtoYW4ifQ.jjfSJagYjtlAwUchuugVlJO_-vzATJTTB0VaOCk5F0M")
   }
 }

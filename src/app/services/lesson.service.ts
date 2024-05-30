@@ -22,4 +22,9 @@ export class LessonService {
     return this.http
       .get<any>(this.baseUrl + `/Lesson/GetAllLessonsByClassId?Id=${id}`)
   }
+
+  PostAttendance(data: any): Observable<any> {
+    return this.http
+      .post<any>(this.baseUrl + `/Attendance/CreateAttendace`, data)
+  }
 }
