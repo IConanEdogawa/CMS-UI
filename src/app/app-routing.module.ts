@@ -1,5 +1,5 @@
 import { ResultInnerComponent as StudentResultInner } from './components/user/result-inner/result-inner.component';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/auth/login/login.component';
 import { LoginMenuComponent } from './components/auth/login-menu/login-menu.component';
@@ -30,6 +30,7 @@ import { NewPasswordComponent } from './components/auth/new-password/new-passwor
 import { CreateTeacherComponent } from './components/auth/create-teacher/create-teacher.component';
 import { CreateClassComponent } from './components/admin/create-class/create-class.component';
 import { TeacherQuestionsComponent } from './components/teacher/teacher-questions/teacher-questions.component';
+import { StudentEventComponent } from './components/user/student-event/student-event.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -52,6 +53,7 @@ const routes: Routes = [
   { path: 'student-ask-question', component: AskQuestionComponent },
   { path: 'student-answer', component: AnswerComponent },
   { path: 'student-ask-question', component: AskQuestionComponent },
+  { path: 'student-events', component: StudentEventComponent},
   
   { path: 'teacher-login', component: TeacherLoginComponent },
   { path: 'form', component: FormComponent },

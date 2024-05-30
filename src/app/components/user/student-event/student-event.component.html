@@ -1,0 +1,18 @@
+<main class="site-main">
+  <app-navbar></app-navbar>
+  <section class="student-event__section">
+    <div></div>
+    <div class="wrapper">
+      <div *ngIf="events" class="events">
+        <div *ngFor="let event of events.$values">
+          <img src="" alt="{{ event.title }}" />
+          <h3>{{ event.title }}</h3>
+          <p>{{ event.description }}</p>
+          <p>
+            {{ event.date.day }}-{{ event.date.month }}-{{ event.date.year }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

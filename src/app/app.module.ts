@@ -50,6 +50,7 @@ import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';import { NzButtonModule } from 'ng-zorro-antd/button';
+import { StudentEventComponent } from './components/user/student-event/student-event.component';
 
 registerLocaleData(en);
 
@@ -100,6 +101,7 @@ registerLocaleData(en);
     CreateClassComponent,
     SelectComponent,
     TeacherQuestionsComponent,
+    StudentEventComponent,
   ],
   imports: [
     BrowserModule,
