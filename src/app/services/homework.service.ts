@@ -12,8 +12,8 @@ export class HomeworkService {
 
   baseUrl: string = environment.baseUrl
 
-  CreateHomework(data: any): Observable<any> {
+  CreateHomework(data: any, file: any): Observable<any> {
     return this.http
-      .post<any>(this.baseUrl + `/Homework/CreateHomework`, data)
+      .post<any>(this.baseUrl + `/Homework/CreateHomework?TZ=${data.TZ}&LessonId=${data.LessonId}`, file)
   }
 }

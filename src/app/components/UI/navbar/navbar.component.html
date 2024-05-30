@@ -23,6 +23,12 @@
         </a>
       </li>
       <li class="header-list-item">
+        <a [routerLink]="['/create-class']" routerLinkActive="active">
+          <img src="assets/images/attendance-logo.png" alt="" />
+          <span> Class Create </span>
+        </a>
+      </li>
+      <li class="header-list-item">
         <a [routerLink]="['/teacher-homework']" routerLinkActive="active">
           <img src="assets/images/homework-logo.png" alt="" />
           <span> Homework </span>
@@ -50,6 +56,12 @@
         <a routerLinkActive="active" [routerLink]="['/notice-events']">
           <img src="assets/images/event-logo.png" alt="" />
           <span> Notice & Event </span>
+        </a>
+      </li>
+      <li class="header-list-item">
+        <a routerLinkActive="active" [routerLink]="['/create-teacher']">
+          <img src="assets/images/register-logo.png" alt="" />
+          <span> Teacher Registration </span>
         </a>
       </li>
       <li class="header-list-item">
@@ -90,6 +102,12 @@
           <a routerLinkActive="active">
             <img src="assets/images/exam-routine.png" alt="" />
             <span> Exam Routine </span>
+          </a>
+        </li>
+        <li class="header-list-item">
+          <a routerLinkActive="active" [routerLink]="['/quiz-start']">
+            <img src="assets/images/mark-logo.png" alt="" />
+            <span> Quiz </span>
           </a>
         </li>
         <li class="header-list-item">

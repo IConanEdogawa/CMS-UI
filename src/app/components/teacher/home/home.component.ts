@@ -15,10 +15,6 @@ export class HomeComponent {
   tz!: string;
   Task: File | null = null
 
-  upload(){
-    document.getElementById("real-input")?.click()
-  }
-
   constructor(
     private readonly classService: ClassService,
     private readonly lessonService: LessonService,
@@ -29,6 +25,10 @@ export class HomeComponent {
       this.submit();
     });
   }
+  upload(){
+    document.getElementById("real-input")?.click()
+  }
+
 
   onChangeClass(event: any) {
     console.log(event.target.value);
@@ -47,12 +47,12 @@ export class HomeComponent {
   data = {
     LessonId: "",
     TZ: "",
-    Task: this.Task,
   };
 
+  file: FormData = new FormData();
+
   onFileSelected(event: any) {
-    this.Task = event.target.files[0] as File;
-    console.log(this.Task, "Task");
+    this.file.append("Task", event.target.files[0]);
   }
   
   
@@ -60,12 +60,12 @@ export class HomeComponent {
     const tz = document.getElementById("homeworkTz") as HTMLTextAreaElement
     this.data.LessonId = this.lessonId;
     this.data.TZ = tz.value;
-    this.data.Task = this.Task;
+    // this.data.Task.append("Task", this.Task);
     console.log(this.Task);
     console.log(this.data);
 
     this.homeworkService
-      .CreateHomework(this.data)
+      .CreateHomework(this.data, this.file)
       .subscribe({
         next: (res) => {
           console.log(res);
