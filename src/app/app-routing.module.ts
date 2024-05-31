@@ -66,7 +66,7 @@ const routes: Routes = [
   {path:"create-class",component:CreateClassComponent},
   {path: "teacher-questions",component:TeacherQuestionsComponent},
   {path:"",component:LoginMenuComponent},
-  { path: '**', component: NotFoundComponent },
+  { path: '**', component: StudentProfileComponent },
 ];
 
 @NgModule({

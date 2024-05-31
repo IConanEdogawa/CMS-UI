@@ -31,6 +31,6 @@ export class EventService {
   }
 
   getAllEvents(): Observable<GetAllEvents> {
-    return this.http.get<GetAllEvents>(this.baseURL + `/Event/GetAllEvents`);
+    return this.http.get<GetAllEvents>(`${this.baseURL}/Event/GetAllEvents`);
   }
 }

@@ -1,28 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { EventService } from '../../../services/event.service';
+import { environment } from '../../../../environments/environment';
 import { GetAllEvents } from '../../../models/get-all-events';
 
 @Component({
   selector: 'app-student-event',
   templateUrl: './student-event.component.html',
-  styleUrl: './student-event.component.scss',
+  styleUrls: ['./student-event.component.scss'],
 })
-export class StudentEventComponent {
+export class StudentEventComponent implements OnInit {
   events!: GetAllEvents;
+  defaultPhoto: string = 'assets/images/default-event.png'; // путь к фото по умолчанию
 
-  constructor(private readonly studentEvent: EventService) {
-    // this.studentEvent.getAllEvents().subscribe({
-    //   next: (res) => {
-    //     this.events = res;
-    //   },
-    //   error: (err) => {
-    //     console.log(err);
-    //   },
-    // });
-  }
+  constructor(private readonly eventService: EventService) {}
 
   ngOnInit(): void {
-    this.studentEvent.getAllEvents().subscribe(
+    this.eventService.getAllEvents().subscribe(
       (data: GetAllEvents) => {
         this.events = data;
       },
@@ -30,5 +23,13 @@ export class StudentEventComponent {
         console.error('Error fetching events', error);
       }
     );
+  }
+
+  getEventPhoto(photoPath: string): string {
+    if (photoPath) {
+      return `${environment.mainPath}${photoPath}`;
+    } else {
+      return this.defaultPhoto;
+    }
   }
 }

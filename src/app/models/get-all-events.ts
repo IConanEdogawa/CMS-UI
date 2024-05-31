@@ -1,5 +1,3 @@
-// src/app/models/event.model.ts
-
 export interface EventDate {
   id: string;
   day: number;

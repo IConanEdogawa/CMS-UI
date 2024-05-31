@@ -5,7 +5,7 @@
     <div class="wrapper">
       <div *ngIf="events" class="events">
         <div *ngFor="let event of events.$values">
-          <img src="" alt="{{ event.title }}" />
+          <img [src]="getEventPhoto(event.photoPath)" alt="{{ event.title }}" />
           <h3>{{ event.title }}</h3>
           <p>{{ event.description }}</p>
           <p>
